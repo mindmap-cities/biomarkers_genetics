@@ -4,7 +4,7 @@ output: html_document
 ---
 # Table of Contents
 1. [First subdomain](#first-subdomain)
-2. [Second subdomain](#Second-subdomain)
+2. [Second subdomain](#second-subdomain)
 3. [Third subdomain](#third-subdomain)
 
 
