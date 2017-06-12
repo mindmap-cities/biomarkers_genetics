@@ -1,5 +1,5 @@
 # Biomarkers and genetics data harmonization work repository
-Welcome to the *Biomarkers and genetics* data harmonization work repository! Documenation of DataSchema variables as well as versionning and storage of data harmonization scripts will be saved in this space. 
+Welcome to the *Biomarkers and genetics domain* data harmonization work repository! Documenation of DataSchema variables as well as versionning and storage of data harmonization scripts will be saved in this space. 
 
 This page includes information to get you started.
 
