@@ -946,14 +946,15 @@ output: html_document
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_0   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive 
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -965,14 +966,15 @@ output: html_document
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_1   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -984,14 +986,15 @@ output: html_document
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_2   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A 
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1003,14 +1006,15 @@ output: html_document
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_3   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1022,14 +1026,15 @@ output: html_document
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_4   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1041,14 +1046,15 @@ output: html_document
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_5   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1060,14 +1066,15 @@ output: html_document
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_6   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1079,14 +1086,15 @@ output: html_document
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_0   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1098,14 +1106,15 @@ output: html_document
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_1   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1117,14 +1126,15 @@ output: html_document
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_2   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1136,14 +1146,15 @@ output: html_document
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_3   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1155,14 +1166,15 @@ output: html_document
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_4   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1174,14 +1186,15 @@ output: html_document
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_5   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive 
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1193,14 +1206,15 @@ output: html_document
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_6   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1212,14 +1226,15 @@ output: html_document
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_0   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1231,14 +1246,15 @@ output: html_document
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_1   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1250,14 +1266,15 @@ output: html_document
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_2   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1269,14 +1286,15 @@ output: html_document
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_3   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive  
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1288,14 +1306,15 @@ output: html_document
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_4   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1307,14 +1326,15 @@ output: html_document
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_5   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1326,14 +1346,15 @@ output: html_document
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_6   
 **Variable description**: Polymorphism of APOE Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1345,14 +1366,15 @@ output: html_document
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_0   
 **Variable description**: Polymorphism of BDNF Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1364,14 +1386,15 @@ output: html_document
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_1   
 **Variable description**: Polymorphism of BDNF Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1383,14 +1406,15 @@ output: html_document
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_2   
 **Variable description**: Polymorphism of BDNF Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive 
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1402,14 +1426,15 @@ output: html_document
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_3   
 **Variable description**: Polymorphism of BDNF Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1421,14 +1446,15 @@ output: html_document
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_4   
 **Variable description**: Polymorphism of BDNF Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1440,14 +1466,15 @@ output: html_document
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_5   
 **Variable description**: Polymorphism of BDNF Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive  
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1460,14 +1487,15 @@ output: html_document
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_6   
 **Variable description**: Polymorphism of BDNF Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1479,14 +1507,15 @@ output: html_document
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_0   
 **Variable description**: Polymorphism of PSEN2 Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1498,14 +1527,15 @@ output: html_document
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_1   
 **Variable description**: Polymorphism of PSEN2 Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive  
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1517,14 +1547,15 @@ output: html_document
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_2   
 **Variable description**: Polymorphism of PSEN2 Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1536,14 +1567,15 @@ output: html_document
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_3   
 **Variable description**: Polymorphism of PSEN2 Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1555,14 +1587,15 @@ output: html_document
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_4   
 **Variable description**: Polymorphism of PSEN2 Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1574,14 +1607,15 @@ output: html_document
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_5   
 **Variable description**: Polymorphism of PSEN2 Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
@@ -1593,14 +1627,15 @@ output: html_document
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_6   
 **Variable description**: Polymorphism of PSEN2 Gene  
-**Value type**:  
-**Variable unit**:  
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
 **Category coding**:  
 
 **Code** | **Category Label**  
 ------------- | -------------  
-0 |   
-1 |   
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
 
 **Harmonization status**:  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
