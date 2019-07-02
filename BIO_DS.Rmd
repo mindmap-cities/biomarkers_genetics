@@ -55,7 +55,7 @@ output: html_document
 **Variable name**: BIO_CRP_3    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
-**Variable unit**: mg/L  
+**Variable unit**: mg/L   
 **Category coding**:   
 
 **Harmonization status**:  
@@ -109,15 +109,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: BIO_TSH_0    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -128,15 +123,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: BIO_TSH_1    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -147,15 +137,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: BIO_TSH_2    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -166,15 +151,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: BIO_TSH_3    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -185,15 +165,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: BIO_TSH_4    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -204,15 +179,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: BIO_TSH_5    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -223,15 +193,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: BIO_TSH_6    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -242,15 +207,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_0    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -261,15 +221,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_1    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -280,15 +235,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_2    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -299,15 +249,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_3    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -318,15 +263,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_4    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -337,15 +277,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_5    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -356,15 +291,10 @@ output: html_document
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_6    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
@@ -375,15 +305,10 @@ output: html_document
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_0    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -394,15 +319,10 @@ output: html_document
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_1    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -413,15 +333,10 @@ output: html_document
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_2    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -432,15 +347,10 @@ output: html_document
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_3    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -451,15 +361,11 @@ output: html_document
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_4    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
 **Category coding**: N/A (continuous variable)  
 
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -470,15 +376,10 @@ output: html_document
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_5    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -489,15 +390,10 @@ output: html_document
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_6    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**:Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -508,15 +404,10 @@ output: html_document
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_0    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -527,15 +418,10 @@ output: html_document
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_1    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -546,15 +432,10 @@ output: html_document
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_2    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -565,15 +446,10 @@ output: html_document
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_3    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -584,15 +460,10 @@ output: html_document
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_4    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -603,15 +474,10 @@ output: html_document
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_5    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -622,15 +488,10 @@ output: html_document
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_6    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
@@ -641,16 +502,10 @@ output: html_document
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_0    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
-
+**Category coding**: 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
@@ -660,15 +515,10 @@ output: html_document
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_1    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
@@ -679,15 +529,10 @@ output: html_document
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_2    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
@@ -698,15 +543,10 @@ output: html_document
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_3    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
@@ -717,15 +557,10 @@ output: html_document
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_4    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Vitamin D measured in serum (fresh and frozen).      
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
@@ -736,15 +571,10 @@ output: html_document
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_5    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
@@ -755,16 +585,10 @@ output: html_document
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_6    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
-
+**Category coding**: 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
@@ -774,15 +598,10 @@ output: html_document
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_0    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Triglycerides measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only) 
@@ -793,16 +612,10 @@ output: html_document
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_1    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
-
+**Category coding**: 
 **Harmonization status**:  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
@@ -812,15 +625,10 @@ output: html_document
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_2    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
@@ -831,15 +639,10 @@ output: html_document
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_3    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
@@ -850,16 +653,10 @@ output: html_document
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_4    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
-
+**Category coding**: 
 **Harmonization status**:  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
@@ -869,16 +666,10 @@ output: html_document
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_5    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
-
+**Category coding**: 
 **Harmonization status**:  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
@@ -888,15 +679,10 @@ output: html_document
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_6    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**: 
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
@@ -910,7 +696,7 @@ output: html_document
 
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_0   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A
 **Category coding**:  
@@ -930,7 +716,7 @@ output: html_document
 ```
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_1   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A
 **Category coding**:  
@@ -950,7 +736,7 @@ output: html_document
 ```
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_2   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A 
 **Category coding**:  
@@ -970,7 +756,7 @@ output: html_document
 ```
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_3   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -990,7 +776,7 @@ output: html_document
 ```
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_4   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1010,7 +796,7 @@ output: html_document
 ```
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_5   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1030,7 +816,7 @@ output: html_document
 ```
 ### **Variable label**: RS7412 
 **Variable name**: BIO_RS7412_6   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1050,7 +836,7 @@ output: html_document
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_0   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1070,7 +856,7 @@ output: html_document
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_1   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1090,7 +876,7 @@ output: html_document
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_2   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1110,7 +896,7 @@ output: html_document
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_3   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1130,7 +916,7 @@ output: html_document
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_4   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1150,7 +936,7 @@ output: html_document
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_5   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1170,7 +956,7 @@ output: html_document
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_6   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1190,7 +976,7 @@ output: html_document
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_0   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1210,7 +996,7 @@ output: html_document
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_1   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1230,7 +1016,7 @@ output: html_document
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_2   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1250,7 +1036,7 @@ output: html_document
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_3   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1270,7 +1056,7 @@ output: html_document
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_4   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1290,7 +1076,7 @@ output: html_document
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_5   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1310,7 +1096,7 @@ output: html_document
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: BIO_Rs440446_6   
-**Variable description**: Polymorphism of APOE Gene  
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1330,7 +1116,7 @@ output: html_document
 ```
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_0   
-**Variable description**: Polymorphism of BDNF Gene  
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1350,7 +1136,7 @@ output: html_document
 ```
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_1   
-**Variable description**: Polymorphism of BDNF Gene  
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1370,7 +1156,7 @@ output: html_document
 ```
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_2   
-**Variable description**: Polymorphism of BDNF Gene  
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1390,7 +1176,7 @@ output: html_document
 ```
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_3   
-**Variable description**: Polymorphism of BDNF Gene  
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1410,7 +1196,7 @@ output: html_document
 ```
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_4   
-**Variable description**: Polymorphism of BDNF Gene  
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1430,7 +1216,7 @@ output: html_document
 ```
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_5   
-**Variable description**: Polymorphism of BDNF Gene  
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1451,7 +1237,7 @@ output: html_document
 
 ### **Variable label**: Rs6265
 **Variable name**: BIO_Rs6265_6   
-**Variable description**: Polymorphism of BDNF Gene  
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1471,7 +1257,7 @@ output: html_document
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_0   
-**Variable description**: Polymorphism of PSEN2 Gene  
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1491,7 +1277,7 @@ output: html_document
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_1   
-**Variable description**: Polymorphism of PSEN2 Gene  
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1511,7 +1297,7 @@ output: html_document
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_2   
-**Variable description**: Polymorphism of PSEN2 Gene  
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1531,7 +1317,7 @@ output: html_document
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_3   
-**Variable description**: Polymorphism of PSEN2 Gene  
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1551,7 +1337,7 @@ output: html_document
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_4   
-**Variable description**: Polymorphism of PSEN2 Gene  
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1571,7 +1357,7 @@ output: html_document
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_5   
-**Variable description**: Polymorphism of PSEN2 Gene  
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1591,7 +1377,7 @@ output: html_document
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: BIO_Rs11156739_6   
-**Variable description**: Polymorphism of PSEN2 Gene  
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
