@@ -10,15 +10,10 @@ output: html_document
 
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: BIO_CRP_0    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:     
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only)  
@@ -29,15 +24,10 @@ output: html_document
 ```
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: BIO_CRP_1    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:     
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
@@ -49,15 +39,10 @@ output: html_document
 
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: BIO_CRP_2    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:    
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
@@ -68,15 +53,10 @@ output: html_document
 ```
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: BIO_CRP_3    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:   
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
@@ -87,15 +67,10 @@ output: html_document
 ```
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: BIO_CRP_4    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:   
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
@@ -106,15 +81,10 @@ output: html_document
 ```
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: BIO_CRP_5    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:     
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
@@ -125,15 +95,10 @@ output: html_document
 ```
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: BIO_CRP_6    
-**Variable description**: Measured in serum (fresh and frozen)  
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
-**Category coding**: N/A (continuous variable)  
-
-**Code** | **Category Label**  
-------------- | -------------  
-0 |   
-1 |   
+**Category coding**:   
 
 **Harmonization status**:  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
