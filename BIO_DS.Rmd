@@ -55,7 +55,7 @@ output: html_document
 **Variable name**: BIO_CRP_3    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
-**Variable unit**: mg/L  , 
+**Variable unit**: mg/L   
 **Category coding**:   
 
 **Harmonization status**:  
