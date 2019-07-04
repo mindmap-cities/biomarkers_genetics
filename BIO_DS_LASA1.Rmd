@@ -1,0 +1,1560 @@
+---
+title: "Biomarkers and genetics DataSchema"
+output: html_document
+---
+
+# Connecting with Opal data server
+## Login to server and assign study data
+```{r, echo=FALSE}
+#Load Opal R library
+library(opal)
+library(data.table)
+# Create an opal object with the login information
+erasmus_opal <-opal.login('agurer','1234tamamw','https://obiba.erasmusmc.nl')
+#Login to Opal server and assign the content of the LASA table(s) to your RStudio environment
+
+# LASA1B
+opal.assign.table.tibble(erasmus_opal, 'LASA1B', 'LASA.LASA1B_biodata',variables = list('bmalbumi','bmtsh','bmcrp','bmtrigly','bmfreet4','bmhscrp'))
+LASA1B <- opal.execute(erasmus_opal,'LASA1B')
+
+# LASA1C
+opal.assign.table.tibble(erasmus_opal, 'LASA1C', 'LASA.LASA1C_biodata',variables = list('cmalbumi','cmtsh','cmcrp','cmtrigly','cmfreet4','cmhscrp', "cmvitd25", "cmvitd25st","cmtsh2", "cmtrigl2", "cmft4", "cmft3"))
+LASA1C <- opal.execute(erasmus_opal,'LASA1C')
+
+
+# LASA1G
+opal.assign.table.tibble(erasmus_opal, 'LASA1G', 'LASA.LASA1G_biodata',variables = list('gmalbumi',"gmvitd25", "gmvitd25st"))
+LASA1G <- opal.execute(erasmus_opal,'LASA1G')
+
+```
+## Assign participant id as first column of your harmonized dataframes
+```{r, echo=FALSE}
+bio_LASA1_0 <- data.frame(id = LASA1B$id)
+bio_LASA1_1 <- data.frame(id = LASA1C$id)
+bio_LASA1_6 <- data.frame(id = LASA1G$id)
+
+
+```
+## When you are done with your work, logout of Opal server
+```{r, echo=FALSE}
+#opal.logout(erasmus_opal) 
+```
+###Replacing all -1's and -2's with NA's and checking the datasets
+
+```{r, echo=FALSE}
+bio_LASA1_0[bio_LASA1_0==-1|bio_LASA1_0==-2]<-NA
+str(bio_LASA1_0)
+View(bio_LASA1_0)
+
+bio_LASA1_1[bio_LASA1_1==-1|bio_LASA1_1==-2]<-NA
+str(bio_LASA1_1)
+
+bio_LASA1_6[bio_LASA1_6==-1|bio_LASA1_6==-2]<-NA
+str(bio_LASA1_6)
+
+```
+# Table of Contents
+1. [Non-genetic Biomarker subdomain](#Non-genetic-biomarker-subdomain)
+2. [Genetic Biomarker subdomain](#Genetic-biomarker-subdomain)
+
+# Non-genetic Biomarkers subdomain
+
+### **Variable label**: C-Reactive Protbein  
+**Variable name**: BIO_CRP_0    
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mg/L  
+**Category coding**:     
+
+**Harmonization status**:  complete
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only)  
+**Harmonization comment**:There are 2 variables for CRP in LASA1: bmcrp and bmhscrp. See the LASA documentation for using the bmhscrp: 
+"Please note that CRP levels have also been determined directly after blood sampling (both in 1992/93 and in 1995/96), but this has been done for respondents in the Zwolle region only (N=384; see “Docu bloedbepaling B en C). However, for complete use of all available CRP data, it is strongly recommended to use data from file B+C861 (inflammatory markers), because this file includes the measurements of respondents in all regions. Also, the CRP determination in Zwolle was performed with a less sensitive assay than the CRP determination in the blood samples from all regions."
+
+**R script**:  
+```{r, echo=TRUE}
+#Checking the varibale bmcrp (Blood: CRP mG/L). It has the same unit of measurement but the values seem odd
+
+table(LASA1B$bmcrp, useNA = "always")
+sum(LASA1B$bmcrp!=-1)
+
+#another CRP varibale but the unit of this variable is ug/ml (=mG/L) but the other variable has lots of -1's??? isn't that a problem?
+table(LASA1B$bmhscrp, useNA = "always")
+bio_LASA1_0$bio_crp_0<-LASA1B$bmhscrp
+table(bio_LASA1_0$bio_crp_0, useNA = "always")
+summary(bio_LASA1_0$bio_crp_0)
+is.numeric(bio_LASA1_0$bio_crp_0)
+```
+### **Variable label**: C-Reactive Protein  
+**Variable name**: BIO_CRP_1    
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mg/L  
+**Category coding**:     
+
+**Harmonization status**:  complete
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+
+table(LASA1C$cmhscrp, useNA = "always")
+bio_LASA1_1$bio_crp_1<-LASA1C$cmhscrp
+table(bio_LASA1_1$bio_crp_1, useNA = "always")
+summary(bio_LASA1_1$bio_crp_1)
+is.numeric(bio_LASA1_1$bio_crp_1)
+
+```
+
+### **Variable label**: C-Reactive Protein  
+**Variable name**: BIO_CRP_2    
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mg/L  
+**Category coding**:    
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: C-Reactive Protein  
+**Variable name**: BIO_CRP_3    
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mg/L   
+**Category coding**:   
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: C-Reactive Protein  
+**Variable name**: BIO_CRP_4    
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mg/L  
+**Category coding**:   
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: C-Reactive Protein  
+**Variable name**: BIO_CRP_5    
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mg/L  
+**Category coding**:     
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: C-Reactive Protein  
+**Variable name**: BIO_CRP_6    
+**Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mg/L  
+**Category coding**:   
+
+**Harmonization status**:  impossibe
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroid Stimulating Hormone  
+**Variable name**: BIO_TSH_0    
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mU/L  
+**Category coding**:
+
+**Harmonization status**: complete 
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**: LASA documentation states the information on thyroid hormone is collected only at time point C, but we have it at time B. In time point C, the measurement they refer to for thyroid function is cmtsh2, not cmtsh. bmths, cmths measures are referred under "Routine measurements: Albumin and cholesterol". What is the difference?
+
+
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1B$bmtsh, useNA = "always")
+bio_LASA1_0$bio_tsh_0<-LASA1B$bmtsh
+table(bio_LASA1_0$bio_tsh_0, useNA = "always")
+summary(bio_LASA1_0$bio_tsh_0)
+
+```
+### **Variable label**: Thyroid Stimulating Hormone  
+**Variable name**: BIO_TSH_1    
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mU/L  
+**Category coding**: 
+
+**Harmonization status**:  complete
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**: There are two variables: cmtsh: Blood: TSH mU/L abd cmtsh2: thyroid-stimulating hormone (mU/l). There are a lot more missing values in cmtsh, and the documentation refers to cmtsh2 for TSH hormone; however we probably should ask about the difference. cmtsh is under Routine measurements: Albumin and cholesterol category. Which one should we refer to?
+
+
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1C$cmtsh, useNA = "always")
+table(LASA1C$cmtsh2, useNA = "always")
+
+#To check whether individuals have similar TSH results looking at both variables (except for the missing cases)
+tsh1<-LASA1C$cmtsh
+tsh1[LASA1C$cmtsh==-2|LASA1C$cmtsh==-1]<-NA
+tsh2<-LASA1C$cmtsh2
+tsh2[LASA1C$cmtsh2==-2|LASA1C$cmtsh2==-1]<-NA
+#For each individual the results of cmtsh, cmtsh2 are closely correlated, thus it could possibly be a re-measuring of the same hormone for some individuals
+lm(tsh1~tsh2)
+table(tsh1, tsh2)
+
+bio_LASA1_1$bio_tsh_1<-LASA1C$cmtsh2
+table(bio_LASA1_1$bio_tsh_1, useNA = "always")
+summary(bio_LASA1_1$bio_tsh_1)
+
+```
+### **Variable label**: Thyroid Stimulating Hormone  
+**Variable name**: BIO_TSH_2    
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mU/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroid Stimulating Hormone  
+**Variable name**: BIO_TSH_3    
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mU/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroid Stimulating Hormone  
+**Variable name**: BIO_TSH_4    
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mU/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroid Stimulating Hormone  
+**Variable name**: BIO_TSH_5    
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mU/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroid Stimulating Hormone  
+**Variable name**: BIO_TSH_6    
+**Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mU/L  
+**Category coding**:
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroxine  
+**Variable name**: BIO_T4_0    
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: pMol/L  
+**Category coding**:
+
+**Harmonization status**:  complete  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1B$bmfreet4 , useNA = "always")
+bio_LASA1_0$bio_t4_0<-LASA1B$bmfreet4
+table(bio_LASA1_0$bio_t4_0, useNA = "always")
+summary(bio_LASA1_0$bio_t4_0)
+
+```
+### **Variable label**: Thyroxine  
+**Variable name**: BIO_T4_1    
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: pMol/L  
+**Category coding**:
+
+**Harmonization status**:  complete  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**: There are 2 different variables for T4: cmft4 (free T4 (pmol/l)) and cmfreet4 (Blood: free T4 pMOL/L)
+
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1C$cmft4 , useNA = "always")
+table(LASA1C$cmfreet4 , useNA = "always")
+
+#T4 but less answers b  
+t4_1<-LASA1C$cmft4
+t4_1[LASA1C$cmft4==-2|LASA1C$cmft4==-1]<-NA
+t4_2<-LASA1C$cmfreet4
+t4_2[LASA1C$cmfreet4==-2|LASA1C$cmfreet4==-1]<-NA
+#For each individual the results of the two T-4 variables correlate quite closely
+lm(t4_1~t4_2)
+
+bio_LASA1_1$bio_t4_1<-LASA1C$cmfreet4
+table(bio_LASA1_1$bio_t4_1, useNA = "always")
+summary(bio_LASA1_1$bio_t4_1)
+
+```
+### **Variable label**: Thyroxine  
+**Variable name**: BIO_T4_2    
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: pMol/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroxine  
+**Variable name**: BIO_T4_3    
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: pMol/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroxine  
+**Variable name**: BIO_T4_4    
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: pMol/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroxine  
+**Variable name**: BIO_T4_5    
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: pMol/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Thyroxine  
+**Variable name**: BIO_T4_6    
+**Variable description**:Thyroxine Measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: pMol/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Albumin  
+**Variable name**: BIO_ALB_0    
+**Variable description**:Albumin measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: G/L  
+**Category coding**: 
+
+**Harmonization status**:  complete  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1B$bmalbumi , useNA = "always")
+bio_LASA1_0$bio_alb_0<-LASA1B$bmalbumi
+table(bio_LASA1_0$bio_alb_0, useNA = "always")
+summary(bio_LASA1_0$bio_alb_0)
+
+```
+### **Variable label**: Albumin  
+**Variable name**: BIO_ALB_1    
+**Variable description**:Albumin measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: G/L  
+**Category coding**: 
+
+**Harmonization status**:  complete 
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1C$cmalbumi , useNA = "always")
+bio_LASA1_1$bio_alb_1<-LASA1C$cmalbumi
+table(bio_LASA1_1$bio_alb_1, useNA = "always")
+summary(bio_LASA1_1$bio_alb_1)
+
+```
+### **Variable label**: Albumin  
+**Variable name**: BIO_ALB_2    
+**Variable description**: Albumin measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: G/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Albumin  
+**Variable name**: BIO_ALB_3    
+**Variable description**: Albumin measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: G/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Albumin  
+**Variable name**: BIO_ALB_4    
+**Variable description**: Albumin measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: G/L  
+**Category coding**: N/A (continuous variable)  
+
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Albumin  
+**Variable name**: BIO_ALB_5    
+**Variable description**: Albumin measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: G/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Albumin  
+**Variable name**: BIO_ALB_6    
+**Variable description**:Albumin measured in serum (fresh and frozen).  
+**Value type**: Decimal 
+**Variable unit**: G/L  
+**Category coding**: 
+
+**Harmonization status**:  complete
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1G$gmalbumi , useNA = "always")
+bio_LASA1_6$bio_alb_6<-LASA1G$gmalbumi
+table(bio_LASA1_6$bio_alb_6, useNA = "always")
+summary(bio_LASA1_6$bio_alb_6)
+
+```
+### **Variable label**: Alanine Aminotransferase  
+**Variable name**: BIO_ALT_0    
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: U/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+#there wasn't this variable in the LASA1B
+```
+### **Variable label**: Alanine Aminotransferase  
+**Variable name**: BIO_ALT_1    
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: U/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Alanine Aminotransferase  
+**Variable name**: BIO_ALT_2    
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: U/L  
+**Category coding**:
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Alanine Aminotransferase  
+**Variable name**: BIO_ALT_3    
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: U/L  
+**Category coding**:
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Alanine Aminotransferase  
+**Variable name**: BIO_ALT_4    
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: U/L  
+**Category coding**:
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Alanine Aminotransferase  
+**Variable name**: BIO_ALT_5    
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: U/L  
+**Category coding**:
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Alanine Aminotransferase  
+**Variable name**: BIO_ALT_6    
+**Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: U/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Vitamin D 
+**Variable name**: BIO_VitD_0    
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: ng/ml  
+**Category coding**: 
+**Harmonization status**:  impossible
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**R script**:  
+```{r, echo=TRUE}
+
+
+```
+### **Variable label**: Vitamin D 
+**Variable name**: BIO_VitD_1    
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: ng/ml  
+**Category coding**: 
+
+**Harmonization status**: complete   
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:There are 2 variables: cmvitd25st (serum: 25-hydroxyvitamin D (25(OH)D), nmol/L, ODIN-standardized) and 
+cmvitd25 (serum: 25-hydroxyvitamin D (25(OH)D), nmol/L). "In 2015, serum 25(OHD) values were standardized using the Vitamin D Standardization Program (VDSP) protocol as part of the European ODIN study" From NIH website (https://ods.od.nih.gov/Research/vdsp.aspx): "art of the ODS Vitamin D Initiative, VDSP is an international collaborative effort to standardize the laboratory measurement of vitamin D status." So should we use the standardized measure to make it more comparable across time and studies. However, if other cohorts didn't use this measure maybe there is not much point?
+The unit of measurement is nmol/L in the study and ng/ml in the DS. So the units are converted to harmonize. 
+
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1C$cmvitd25st, useNA = "always")
+table(LASA1C$cmvitd25, useNA = "always")
+
+summary(LASA1C$cmvitd25)
+summary(LASA1C$cmvitd25st)
+
+bio_LASA1_1$bio_vitd_1<-LASA1C$cmvitd25st
+#1 ng/ml =0.400641 nmol/l
+table(bio_LASA1_1$bio_vitd_1, useNA = "always")
+bio_LASA1_1$bio_vitd_1<-bio_LASA1_1$bio_vitd_1*0.400641
+table(bio_LASA1_1$bio_vitd_1, useNA = "always")
+summary(bio_LASA1_1$bio_vitd_1)
+
+```
+### **Variable label**: Vitamin D 
+**Variable name**: BIO_VitD_2    
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: ng/ml  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Vitamin D 
+**Variable name**: BIO_VitD_3    
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: ng/ml  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Vitamin D 
+**Variable name**: BIO_VitD_4    
+**Variable description**: Vitamin D measured in serum (fresh and frozen).      
+**Value type**: Decimal 
+**Variable unit**: ng/ml  
+**Category coding**:
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Vitamin D 
+**Variable name**: BIO_VitD_5    
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: ng/ml  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Vitamin D 
+**Variable name**: BIO_VitD_6    
+**Variable description**: Vitamin D measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: ng/ml  
+**Category coding**: 
+**Harmonization status**:  complete  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**R script**:  
+```{r, echo=TRUE}
+
+table(LASA1G$gmvitd25st, useNA = "always")
+table(LASA1G$gmvitd25, useNA = "always")
+
+summary(LASA1G$gmvitd25st)
+summary(LASA1G$gmvitd25)
+
+bio_LASA1_6$bio_vitd_6<-LASA1G$gmvitd25st
+bio_LASA1_6$bio_vitd_6<-bio_LASA1_6$bio_vitd_6*0.400641
+table(bio_LASA1_6$bio_vitd_6, useNA = "always")
+summary(bio_LASA1_6$bio_vitd_6)
+
+```
+### **Variable label**: Triglycerides 
+**Variable name**: BIO_TG_0    
+**Variable description**: Triglycerides measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mmol/L  
+**Category coding**: 
+
+**Harmonization status**:  complete  
+**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only) 
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1B$bmtrigly, useNA = "always")
+bio_LASA1_0$bio_tg_0<-LASA1B$bmtrigly
+table(bio_LASA1_0$bio_tg_0, useNA = "always")
+summary(bio_LASA1_0$bio_tg_0)
+
+```
+### **Variable label**: Triglycerides 
+**Variable name**: BIO_TG_1    
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mmol/L  
+**Category coding**: 
+**Harmonization status**:  complete  
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**: There are 2 variables in the dataset.  cmtrigly (Blood: triglycerids mMOL/L), cmtrigl2 (Blood: triglycerids mmol/L). cmtrigl2 is specifically under Cholesterol, triglycerides and fructosamin, cmtrigly is under routine measures. For bmtrigly, for collection point B, the documentation mentions -2's are from the Oss region, maybe these routine measure were not taken from that region at time point C as well?
+
+**R script**:  
+```{r, echo=TRUE}
+table(LASA1C$cmtrigly, useNA = "always")
+table(LASA1C$cmtrigl2, useNA = "always")
+
+tg1<-LASA1C$cmtrigly
+tg1[LASA1C$cmtrigly==-2|LASA1C$cmtrigly==-1]<-NA
+tg2<-LASA1C$cmtrigl2
+tg2[LASA1C$cmtrigl2==-2|LASA1C$cmtrigl2==-1]<-NA
+
+#For each individual the results of the two variables are close to each other
+lm(tg1~tg2)
+
+#cmtrigl2 has less missing cases
+bio_LASA1_1$bio_tg_1<-LASA1C$cmtrigl2
+table(bio_LASA1_1$bio_tg_1, useNA = "always")
+summary(bio_LASA1_1$bio_tg_1)
+
+```
+### **Variable label**: Triglycerides 
+**Variable name**: BIO_TG_2    
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mmol/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Triglycerides 
+**Variable name**: BIO_TG_3    
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mmol/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Triglycerides 
+**Variable name**: BIO_TG_4    
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mmol/L  
+**Category coding**: 
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Triglycerides 
+**Variable name**: BIO_TG_5    
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mmol/L  
+**Category coding**: 
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+### **Variable label**: Triglycerides 
+**Variable name**: BIO_TG_6    
+**Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
+**Value type**: Decimal 
+**Variable unit**: mmol/L  
+**Category coding**: 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**R script**:  
+```{r, echo=TRUE}
+#This is w### **Variable label**: Albumin  
+
+```
+
+# Genetic Biomarker subdomain
+
+### **Variable label**: RS7412 
+**Variable name**: BIO_RS7412_0   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: RS7412 
+**Variable name**: BIO_RS7412_1   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: RS7412 
+**Variable name**: BIO_RS7412_2   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A 
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: RS7412 
+**Variable name**: BIO_RS7412_3   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: RS7412 
+**Variable name**: BIO_RS7412_4   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: RS7412 
+**Variable name**: BIO_RS7412_5   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: RS7412 
+**Variable name**: BIO_RS7412_6   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs429358 
+**Variable name**: BIO_Rs429358_0   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs429358 
+**Variable name**: BIO_Rs429358_1   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs429358 
+**Variable name**: BIO_Rs429358_2   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs429358 
+**Variable name**: BIO_Rs429358_3   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs429358 
+**Variable name**: BIO_Rs429358_4   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs429358 
+**Variable name**: BIO_Rs429358_5   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs429358 
+**Variable name**: BIO_Rs429358_6   
+**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs440446 
+**Variable name**: BIO_Rs440446_0   
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs440446 
+**Variable name**: BIO_Rs440446_1   
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs440446 
+**Variable name**: BIO_Rs440446_2   
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs440446 
+**Variable name**: BIO_Rs440446_3   
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive  
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs440446 
+**Variable name**: BIO_Rs440446_4   
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs440446 
+**Variable name**: BIO_Rs440446_5   
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs440446 
+**Variable name**: BIO_Rs440446_6   
+**Variable description**: Rs440446 Polymorphism of APOE Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs6265
+**Variable name**: BIO_Rs6265_0   
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs6265
+**Variable name**: BIO_Rs6265_1   
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs6265
+**Variable name**: BIO_Rs6265_2   
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive 
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs6265
+**Variable name**: BIO_Rs6265_3   
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs6265
+**Variable name**: BIO_Rs6265_4   
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs6265
+**Variable name**: BIO_Rs6265_5   
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive  
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+
+### **Variable label**: Rs6265
+**Variable name**: BIO_Rs6265_6   
+**Variable description**: Rs6265 Polymorphism of BDNF Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs11156739
+**Variable name**: BIO_Rs11156739_0   
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs11156739
+**Variable name**: BIO_Rs11156739_1   
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive  
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs11156739
+**Variable name**: BIO_Rs11156739_2   
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs11156739
+**Variable name**: BIO_Rs11156739_3   
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs11156739
+**Variable name**: BIO_Rs11156739_4   
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs11156739
+**Variable name**: BIO_Rs11156739_5   
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
+### **Variable label**: Rs11156739
+**Variable name**: BIO_Rs11156739_6   
+**Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
+**Value type**: alphanumeric  
+**Variable unit**: N/A  
+**Category coding**:  
+
+**Code** | **Category Label**  
+------------- | -------------  
+0 | Homozygous Dominant    
+1 | Homozygous Recessive   
+2 | Heterozygous Recessive
+
+**Harmonization status**:  impossible  
+**Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
+**R script**:  
+```{r, echo=TRUE}
+#This is where the R-script will be written
+
+```
