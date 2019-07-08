@@ -25,7 +25,7 @@ LASA2G <- opal.execute(erasmus_opal,'LASA2G')
 ## Assign participant id as first column of your harmonized dataframes
 ```{r, echo=FALSE}
 bio_LASA2_0 <- data.frame(id = LASA2B$id)
-bio_LASA2_6 <- data.frame(id = LASA2G$id)
+bio_LASA2_2 <- data.frame(id = LASA2G$id)
 
 
 ```
@@ -40,8 +40,8 @@ bio_LASA2_0[bio_LASA2_0==-1|bio_LASA2_0==-2]<-NA
 str(bio_LASA2_0)
 View(bio_LASA2_0)
 
-bio_LASA2_6[bio_LASA2_6==-1|bio_LASA2_6==-2]<-NA
-str(bio_LASA2_6)
+bio_LASA2_2[bio_LASA2_2==-1|bio_LASA2_2==-2]<-NA
+str(bio_LASA2_2)
 
 ```
 # Table of Contents
@@ -401,11 +401,14 @@ summary(bio_LASA2_0$bio_alb_0)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  complete  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(LASA2G$gmalbumi , useNA = "always")
+bio_lasa2_2$bio_alb_2<-LASA2G$gmalbumi
+table(bio_lasa2_2$bio_alb_2, useNA = "always")
+summary(bio_lasa2_2$bio_alb_2)
 
 ```
 ### **Variable label**: Albumin  
@@ -458,14 +461,10 @@ summary(bio_LASA2_0$bio_alb_0)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  complete
+**Harmonization status**:  impossible
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA2G$gmalbumi , useNA = "always")
-bio_LASA2_6$bio_alb_6<-LASA2G$gmalbumi
-table(bio_LASA2_6$bio_alb_6, useNA = "always")
-summary(bio_LASA2_6$bio_alb_6)
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -608,11 +607,22 @@ summary(bio_LASA2_0$bio_vitd_0)
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  complete  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
+table(LASA2G$gmvitd25st, useNA = "always")
+table(LASA2G$gmvitd25, useNA = "always")
+
+summary(LASA2G$gmvitd25)
+summary(LASA2G$gmvitd25st)
+
+bio_lasa2_2$bio_vitd_2<-LASA2G$gmvitd25st
+#1 ng/ml =0.400641 nmol/l
+bio_lasa2_2$bio_vitd_2[bio_lasa2_2$bio_vitd_2==-1]<-NA
+bio_lasa2_2$bio_vitd_2<-bio_lasa2_2$bio_vitd_2*0.400641
+table(bio_lasa2_2$bio_vitd_2, useNA = "always")
+summary(bio_lasa2_2$bio_vitd_2)
 
 ```
 ### **Variable label**: Vitamin D 
@@ -663,23 +673,11 @@ summary(bio_LASA2_0$bio_vitd_0)
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
 **Category coding**: 
-**Harmonization status**:  complete  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
 
-table(LASA2G$gmvitd25st, useNA = "always")
-table(LASA2G$gmvitd25, useNA = "always")
-
-summary(LASA2G$gmvitd25)
-summary(LASA2G$gmvitd25st)
-
-bio_LASA2_6$bio_vitd_6<-LASA2G$gmvitd25st
-#1 ng/ml =0.400641 nmol/l
-bio_LASA2_6$bio_vitd_6[bio_LASA2_6$bio_vitd_6==-1]<-NA
-bio_LASA2_6$bio_vitd_6<-bio_LASA2_6$bio_vitd_6*0.400641
-table(bio_LASA2_6$bio_vitd_6, useNA = "always")
-summary(bio_LASA2_6$bio_vitd_6)
 
 
 ```
