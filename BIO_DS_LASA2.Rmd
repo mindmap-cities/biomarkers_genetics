@@ -7,10 +7,10 @@ output: html_document
 ## Login to server and assign study data
 ```{r, echo=FALSE}
 #Load Opal R library
-library(opal)
+library(opalr)
 library(data.table)
 # Create an opal object with the login information
-erasmus_opal <-opal.login('agurer','1234tamamw','https://obiba.erasmusmc.nl')
+erasmus_opal <-opal.login()
 #Login to Opal server and assign the content of the LASA table(s) to your RStudio environment
 
 # LASA2B
@@ -405,10 +405,15 @@ summary(bio_LASA2_0$bio_alb_0)
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
+# table(LASA2G$gmalbumi , useNA = "always")
+# bio_lasa2_2$bio_alb_2<-LASA2G$gmalbumi
+# table(bio_lasa2_2$bio_alb_2, useNA = "always")
+# summary(bio_lasa2_2$bio_alb_2)
+
 table(LASA2G$gmalbumi , useNA = "always")
-bio_lasa2_2$bio_alb_2<-LASA2G$gmalbumi
-table(bio_lasa2_2$bio_alb_2, useNA = "always")
-summary(bio_lasa2_2$bio_alb_2)
+bio_LASA2_2$bio_alb_2<-LASA2G$gmalbumi
+table(bio_LASA2_2$bio_alb_2, useNA = "always")
+summary(bio_LASA2_2$bio_alb_2)
 
 ```
 ### **Variable label**: Albumin  
@@ -617,12 +622,18 @@ table(LASA2G$gmvitd25, useNA = "always")
 summary(LASA2G$gmvitd25)
 summary(LASA2G$gmvitd25st)
 
-bio_lasa2_2$bio_vitd_2<-LASA2G$gmvitd25st
+bio_LASA2_2$bio_vitd_2<-LASA2G$gmvitd25st
+
+# bio_lasa2_2$bio_vitd_2[bio_lasa2_2$bio_vitd_2==-1]<-NA
+# bio_lasa2_2$bio_vitd_2<-bio_lasa2_2$bio_vitd_2*0.400641
+# table(bio_lasa2_2$bio_vitd_2, useNA = "always")
+# summary(bio_lasa2_2$bio_vitd_2)
+
 #1 ng/ml =0.400641 nmol/l
-bio_lasa2_2$bio_vitd_2[bio_lasa2_2$bio_vitd_2==-1]<-NA
-bio_lasa2_2$bio_vitd_2<-bio_lasa2_2$bio_vitd_2*0.400641
-table(bio_lasa2_2$bio_vitd_2, useNA = "always")
-summary(bio_lasa2_2$bio_vitd_2)
+bio_LASA2_2$bio_vitd_2[bio_LASA2_2$bio_vitd_2==-1]<-NA
+bio_LASA2_2$bio_vitd_2<-bio_LASA2_2$bio_vitd_2*0.400641
+table(bio_LASA2_2$bio_vitd_2, useNA = "always")
+summary(bio_LASA2_2$bio_vitd_2)
 
 ```
 ### **Variable label**: Vitamin D 
