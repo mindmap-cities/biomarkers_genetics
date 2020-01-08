@@ -280,6 +280,18 @@ bio_LASA1_1[is.nan(bio_LASA1_1$bio_tsh_1),]$bio_tsh_1 <- NA
 
 rm(tsh1,tsh2)
 
+#To check whether individuals have similar TSH results looking at both variables (except for the missing cases)
+tsh1<-LASA1C$cmtsh
+tsh1[LASA1C$cmtsh==-2|LASA1C$cmtsh==-1]<-NA
+tsh2<-LASA1C$cmtsh2
+tsh2[LASA1C$cmtsh2==-2|LASA1C$cmtsh2==-1]<-NA
+#For each individual the results of cmtsh, cmtsh2 are closely correlated, thus it could possibly be a re-measuring of the same hormone for some individuals
+lm(tsh1~tsh2)
+table(tsh1, tsh2)
+
+bio_LASA1_1$bio_tsh_1<-LASA1C$cmtsh2
+table(bio_LASA1_1$bio_tsh_1, useNA = "always")
+summary(bio_LASA1_1$bio_tsh_1)
   
   
 
