@@ -67,7 +67,7 @@ str(bio_LASA1_6)
 **Category coding**:     
 
 **Harmonization status**:  complete
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only).  Correlation between frozen and fresh (bmhscrp and bmcrp) is 0.607 so both variables were used for harmoniztation. Values from bmhscrp were taken first, and if there were missing values, values were taken from bmcrp.  
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only).  Values from frozen and fresh are closely correlated so both variables were used for harmoniztation. Values from frozen were taken first, and if there were missing values, values were taken from fresh.    
 **R script**:  
 ```{r, echo=TRUE}
 bio_LASA1_0$bio_crp_0 <- ifelse(
@@ -85,7 +85,7 @@ bio_LASA1_0[bio_LASA1_0$bio_crp_0 == -1 |
 **Category coding**:     
 
 **Harmonization status**:  complete
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. Values from frozen and fresh are closely correlated so both variables were used for harmoniztation. Values from frozen were taken first, and if there were missing values, values were taken from fresh.     
 **R script**:  
 ```{r, echo=TRUE}
 bio_LASA1_1$bio_crp_1 <- ifelse(
@@ -168,18 +168,17 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 **Variable unit**: mU/L  
 **Category coding**:
 
-**Harmonization status**: impossible   
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization status**: complete     
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. Only values from fresh were available in this wave.  
 
 **R script**:  
 ```{r, echo=TRUE}
 
 #**Question for cohort**: LASA documentation states the information on thyroid hormone is collected only at time point C, but we have it at time B. In time point C, the measurement they refer to for thyroid function is cmtsh2, not cmtsh. bmths, cmths measures are referred under "Routine measurements: Albumin and cholesterol". What is the difference?
   
-  
-# bio_LASA1_0$bio_tsh_0 <- LASA1B$bmtsh
-# bio_LASA1_0[bio_LASA1_0$bio_tsh_0 == -1 | 
-#             bio_LASA1_0$bio_tsh_0 == -2,]$bio_tsh_0 <- NA
+bio_LASA1_0$bio_tsh_0 <- LASA1B$bmtsh
+bio_LASA1_0[bio_LASA1_0$bio_tsh_0 == -1 |
+            bio_LASA1_0$bio_tsh_0 == -2,]$bio_tsh_0 <- NA
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -190,7 +189,7 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 **Category coding**: 
 
 **Harmonization status**:  complete
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. Values from frozen and fresh are closely correlated so both variables were used for harmoniztation. Values from frozen were taken first, and if there were missing values, values were taken from fresh.    
 
 
 **R script**:  
@@ -198,11 +197,6 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 
 #**Question for cohort**: There are two variables: cmtsh: Blood: TSH mU/L abd cmtsh2: thyroid-stimulating hormone (mU/l). There are a lot more missing values in cmtsh, and the documentation refers to cmtsh2 for TSH hormone; however we probably should ask about the difference. cmtsh is under Routine measurements: Albumin and cholesterol category. Which one should we refer to?
 
-# propostion 1
-bio_LASA1_1$bio_tsh_1 <- LASA1C$cmtsh2
-bio_LASA1_1[bio_LASA1_1$bio_tsh_1==-1 | 
-            bio_LASA1_1$bio_tsh_1==-2,]$bio_tsh_1 <- NA
-# propostion 2
 bio_LASA1_1$bio_tsh_1 <- ifelse(
                           is.na(LASA1C$cmtsh2),
                                 LASA1C$cmtsh,
@@ -282,15 +276,15 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
 **Variable unit**: pMol/L  
 **Category coding**:
 
-**Harmonization status**:  complete  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization status**:  complete      
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. Only values from fresh are available at this wave. Only values from fresh were available for this wave.  
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA1B$bmfreet4 , useNA = "always")
-bio_LASA1_0$bio_t4_0<-LASA1B$bmfreet4
-table(bio_LASA1_0$bio_t4_0, useNA = "always")
-summary(bio_LASA1_0$bio_t4_0)
+#**Question for cohort**: LASA documentation states the information on thyroid hormone is collected only at time point C, but we have it at time B. What is bmfreet4, the variable at time B?
 
+bio_LASA1_0$bio_t4_0 <- LASA1B$bmfreet4
+bio_LASA1_0[bio_LASA1_0$bio_t4_0 == -1 |
+            bio_LASA1_0$bio_t4_0 == -2,]$bio_t4_0 <- NA
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_1    
@@ -300,26 +294,16 @@ summary(bio_LASA1_0$bio_t4_0)
 **Category coding**:
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
-**Harmonization comment**: There are 2 different variables for T4: cmft4 (free T4 (pmol/l)) and cmfreet4 (Blood: free T4 pMOL/L)
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. Values from frozen and fresh are closely correlated so both variables were used for harmoniztation. Values from frozen were taken first, and if there were missing values, values were taken from fresh.    
 
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA1C$cmft4 , useNA = "always")
-table(LASA1C$cmfreet4 , useNA = "always")
-
-#T4 but less answers b  
-t4_1<-LASA1C$cmft4
-t4_1[LASA1C$cmft4==-2|LASA1C$cmft4==-1]<-NA
-t4_2<-LASA1C$cmfreet4
-t4_2[LASA1C$cmfreet4==-2|LASA1C$cmfreet4==-1]<-NA
-#For each individual the results of the two T-4 variables correlate quite closely
-lm(t4_1~t4_2)
-
-bio_LASA1_1$bio_t4_1<-LASA1C$cmfreet4
-table(bio_LASA1_1$bio_t4_1, useNA = "always")
-summary(bio_LASA1_1$bio_t4_1)
-
+bio_LASA1_1$bio_t4_1 <- ifelse(
+                         is.na(LASA1C$cmfreet4),
+                               LASA1C$cmft4,
+                               LASA1C$cmfreet4)
+bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 | 
+            bio_LASA1_1$bio_t4_1==-2,]$bio_t4_1 <- NA
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: BIO_T4_2    
@@ -332,7 +316,6 @@ summary(bio_LASA1_1$bio_t4_1)
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -346,7 +329,6 @@ summary(bio_LASA1_1$bio_t4_1)
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -360,7 +342,6 @@ summary(bio_LASA1_1$bio_t4_1)
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -374,7 +355,6 @@ summary(bio_LASA1_1$bio_t4_1)
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -388,7 +368,6 @@ summary(bio_LASA1_1$bio_t4_1)
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
