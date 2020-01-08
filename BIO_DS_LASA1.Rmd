@@ -665,14 +665,12 @@ bio_LASA1_6$bio_vitd_6 <- bio_LASA1_6$bio_vitd_6*0.400641
 **Category coding**: 
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only) 
+**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only). Values are from non-fasting participants.   
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA1B$bmtrigly, useNA = "always")
 bio_LASA1_0$bio_tg_0<-LASA1B$bmtrigly
-table(bio_LASA1_0$bio_tg_0, useNA = "always")
-summary(bio_LASA1_0$bio_tg_0)
-
+bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 | 
+            bio_LASA1_0$bio_tg_0 == -2,]$bio_tg_0 <- NA
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_1    
@@ -682,26 +680,23 @@ summary(bio_LASA1_0$bio_tg_0)
 **Category coding**: 
 **Harmonization status**:  complete  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
-**Harmonization comment**: There are 2 variables in the dataset.  cmtrigly (Blood: triglycerids mMOL/L), cmtrigl2 (Blood: triglycerids mmol/L). cmtrigl2 is specifically under Cholesterol, triglycerides and fructosamin, cmtrigly is under routine measures. For bmtrigly, for collection point B, the documentation mentions -2's are from the Oss region, maybe these routine measure were not taken from that region at time point C as well?
+
 
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA1C$cmtrigly, useNA = "always")
-table(LASA1C$cmtrigl2, useNA = "always")
+#**Question for cohort**: There are 2 variables in the dataset.  cmtrigly (Blood: triglycerids mMOL/L), cmtrigl2 (Blood: triglycerids mmol/L). cmtrigl2 is specifically under Cholesterol, triglycerides and fructosamin, cmtrigly is under routine measures. For bmtrigly, for collection point B, the documentation mentions -2's are from the Oss region, maybe these routine measure were not taken from that region at time point C as well?
 
-tg1<-LASA1C$cmtrigly
-tg1[LASA1C$cmtrigly==-2|LASA1C$cmtrigly==-1]<-NA
-tg2<-LASA1C$cmtrigl2
-tg2[LASA1C$cmtrigl2==-2|LASA1C$cmtrigl2==-1]<-NA
-
-#For each individual the results of the two variables are close to each other
-lm(tg1~tg2)
-
-#cmtrigl2 has less missing cases
-bio_LASA1_1$bio_tg_1<-LASA1C$cmtrigl2
-table(bio_LASA1_1$bio_tg_1, useNA = "always")
-summary(bio_LASA1_1$bio_tg_1)
-
+# # propostion 1
+# bio_LASA1_1$bio_tg_1 <- LASA1C$cmtrigl2
+# bio_LASA1_1[bio_LASA1_1$bio_tg_1 == -1 | 
+#             bio_LASA1_1$bio_tg_1 == -2,]$bio_tg_1 <- NA
+# # propostion 2
+# bio_LASA1_1$bio_tg_1 <- ifelse(
+#                          is.na(LASA1C$cmtrigl2),
+#                                LASA1C$cmtrigly,
+#                                LASA1C$cmtrigl2)
+# bio_LASA1_1[bio_LASA1_1$bio_tg_1 == -1 | 
+#             bio_LASA1_1$bio_tg_1 == -2,]$bio_tg_1 <- NA
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: BIO_TG_2    
@@ -715,7 +710,6 @@ summary(bio_LASA1_1$bio_tg_1)
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -729,7 +723,6 @@ summary(bio_LASA1_1$bio_tg_1)
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -742,7 +735,6 @@ summary(bio_LASA1_1$bio_tg_1)
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -755,7 +747,6 @@ summary(bio_LASA1_1$bio_tg_1)
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -769,7 +760,6 @@ summary(bio_LASA1_1$bio_tg_1)
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 
