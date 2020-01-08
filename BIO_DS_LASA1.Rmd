@@ -378,14 +378,12 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
 **Category coding**: 
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS. Only values from frozen were available in this wave.   
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA1B$bmalbumi , useNA = "always")
 bio_LASA1_0$bio_alb_0<-LASA1B$bmalbumi
-table(bio_LASA1_0$bio_alb_0, useNA = "always")
-summary(bio_LASA1_0$bio_alb_0)
-
+bio_LASA1_0[bio_LASA1_0$bio_alb_0 == -1 | 
+            bio_LASA1_0$bio_alb_0 == -2,]$bio_alb_0 <- NA
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_1    
@@ -395,14 +393,12 @@ summary(bio_LASA1_0$bio_alb_0)
 **Category coding**: 
 
 **Harmonization status**:  complete 
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS. Only values from frozen were available in this wave.   
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA1C$cmalbumi , useNA = "always")
 bio_LASA1_1$bio_alb_1<-LASA1C$cmalbumi
-table(bio_LASA1_1$bio_alb_1, useNA = "always")
-summary(bio_LASA1_1$bio_alb_1)
-
+bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 | 
+            bio_LASA1_1$bio_alb_1 == -2,]$bio_alb_1 <- NA
 ```
 ### **Variable label**: Albumin  
 **Variable name**: BIO_ALB_2    
@@ -415,7 +411,6 @@ summary(bio_LASA1_1$bio_alb_1)
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -429,7 +424,6 @@ summary(bio_LASA1_1$bio_alb_1)
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -444,7 +438,6 @@ summary(bio_LASA1_1$bio_alb_1)
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -458,7 +451,6 @@ summary(bio_LASA1_1$bio_alb_1)
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Albumin  
@@ -468,15 +460,13 @@ summary(bio_LASA1_1$bio_alb_1)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  complete
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA1G$gmalbumi , useNA = "always")
 bio_LASA1_6$bio_alb_6<-LASA1G$gmalbumi
-table(bio_LASA1_6$bio_alb_6, useNA = "always")
-summary(bio_LASA1_6$bio_alb_6)
-
+bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 | 
+            bio_LASA1_6$bio_alb_6 == -2,]$bio_alb_6 <- NA
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_0    
