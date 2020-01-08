@@ -67,23 +67,15 @@ str(bio_LASA1_6)
 **Category coding**:     
 
 **Harmonization status**:  complete
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only)  
-**Harmonization comment**:There are 2 variables for CRP in LASA1: bmcrp and bmhscrp. See the LASA documentation for using the bmhscrp: 
-"Please note that CRP levels have also been determined directly after blood sampling (both in 1992/93 and in 1995/96), but this has been done for respondents in the Zwolle region only (N=384; see “Docu bloedbepaling B en C). However, for complete use of all available CRP data, it is strongly recommended to use data from file B+C861 (inflammatory markers), because this file includes the measurements of respondents in all regions. Also, the CRP determination in Zwolle was performed with a less sensitive assay than the CRP determination in the blood samples from all regions."
-
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only).  Correlation between frozen and fresh (bmhscrp and bmcrp) is 0.607 so both variables were used for harmoniztation. Values from bmhscrp were taken first, and if there were missing values, values were taken from bmcrp.  
 **R script**:  
 ```{r, echo=TRUE}
-#Checking the varibale bmcrp (Blood: CRP mG/L). It has the same unit of measurement but the values seem odd
-
-table(LASA1B$bmcrp, useNA = "always")
-sum(LASA1B$bmcrp!=-1)
-
-#another CRP varibale but the unit of this variable is ug/ml (=mG/L) but the other variable has lots of -1's??? isn't that a problem?
-table(LASA1B$bmhscrp, useNA = "always")
-bio_LASA1_0$bio_crp_0<-LASA1B$bmhscrp
-table(bio_LASA1_0$bio_crp_0, useNA = "always")
-summary(bio_LASA1_0$bio_crp_0)
-is.numeric(bio_LASA1_0$bio_crp_0)
+bio_LASA1_0$bio_crp_0 <- ifelse(
+                          is.na(LASA1B$bmhscrp), 
+                                LASA1B$bmcrp, 
+                                LASA1B$bmhscrp)
+bio_LASA1_0[bio_LASA1_0$bio_crp_0 == -1 | 
+            bio_LASA1_0$bio_crp_0 == -2,]$bio_crp_0 <- NA
 ```
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: BIO_CRP_1    
@@ -96,13 +88,12 @@ is.numeric(bio_LASA1_0$bio_crp_0)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-
-table(LASA1C$cmhscrp, useNA = "always")
-bio_LASA1_1$bio_crp_1<-LASA1C$cmhscrp
-table(bio_LASA1_1$bio_crp_1, useNA = "always")
-summary(bio_LASA1_1$bio_crp_1)
-is.numeric(bio_LASA1_1$bio_crp_1)
-
+bio_LASA1_1$bio_crp_1 <- ifelse(
+                          is.na(LASA1C$cmhscrp), 
+                                LASA1C$cmcrp,
+                                LASA1C$cmhscrp)
+bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 | 
+            bio_LASA1_1$bio_crp_1 == -2,]$bio_crp_1<-NA
 ```
 
 ### **Variable label**: C-Reactive Protein  
@@ -116,7 +107,6 @@ is.numeric(bio_LASA1_1$bio_crp_1)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -130,7 +120,6 @@ is.numeric(bio_LASA1_1$bio_crp_1)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -144,7 +133,6 @@ is.numeric(bio_LASA1_1$bio_crp_1)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -158,7 +146,6 @@ is.numeric(bio_LASA1_1$bio_crp_1)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -172,7 +159,6 @@ is.numeric(bio_LASA1_1$bio_crp_1)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
