@@ -39,20 +39,6 @@ bio_LASA1_6 <- data.frame(id = LASA1G$id)
 ```{r, echo=FALSE}
 #opal.logout(erasmus_opal) 
 ```
-###Replacing all -1's and -2's with NA's and checking the datasets
-
-```{r, echo=FALSE}
-bio_LASA1_0[bio_LASA1_0==-1|bio_LASA1_0==-2]<-NA
-str(bio_LASA1_0)
-View(bio_LASA1_0)
-
-bio_LASA1_1[bio_LASA1_1==-1|bio_LASA1_1==-2]<-NA
-str(bio_LASA1_1)
-
-bio_LASA1_6[bio_LASA1_6==-1|bio_LASA1_6==-2]<-NA
-str(bio_LASA1_6)
-
-```
 # Table of Contents
 1. [Non-genetic Biomarker subdomain](#Non-genetic-biomarker-subdomain)
 2. [Genetic Biomarker subdomain](#Genetic-biomarker-subdomain)
