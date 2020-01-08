@@ -426,6 +426,20 @@ bio_LASA1_1[is.nan(bio_LASA1_1$bio_t4_1),]$bio_t4_1 <- NA
 
 rm(t4_1,t4_2)
 
+table(LASA1C$cmft4 , useNA = "always")
+table(LASA1C$cmfreet4 , useNA = "always")
+
+#T4 but less answers b  
+t4_1<-LASA1C$cmft4
+t4_1[LASA1C$cmft4==-2|LASA1C$cmft4==-1]<-NA
+t4_2<-LASA1C$cmfreet4
+t4_2[LASA1C$cmfreet4==-2|LASA1C$cmfreet4==-1]<-NA
+#For each individual the results of the two T-4 variables correlate quite closely
+lm(t4_1~t4_2)
+
+bio_LASA1_1$bio_t4_1<-LASA1C$cmfreet4
+table(bio_LASA1_1$bio_t4_1, useNA = "always")
+summary(bio_LASA1_1$bio_t4_1)
 
 
 
