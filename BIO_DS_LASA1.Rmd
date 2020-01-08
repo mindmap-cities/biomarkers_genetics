@@ -479,8 +479,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
-#there wasn't this variable in the LASA1B
+
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: BIO_ALT_1    
@@ -493,7 +492,6 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -507,7 +505,6 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -521,7 +518,6 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -535,7 +531,6 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -549,7 +544,6 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -563,7 +557,6 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -577,7 +570,6 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_1    
@@ -587,26 +579,16 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Category coding**: 
 
 **Harmonization status**: complete   
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
-**Harmonization comment**:There are 2 variables: cmvitd25st (serum: 25-hydroxyvitamin D (25(OH)D), nmol/L, ODIN-standardized) and 
-cmvitd25 (serum: 25-hydroxyvitamin D (25(OH)D), nmol/L). "In 2015, serum 25(OHD) values were standardized using the Vitamin D Standardization Program (VDSP) protocol as part of the European ODIN study" From NIH website (https://ods.od.nih.gov/Research/vdsp.aspx): "art of the ODS Vitamin D Initiative, VDSP is an international collaborative effort to standardize the laboratory measurement of vitamin D status." So should we use the standardized measure to make it more comparable across time and studies. However, if other cohorts didn't use this measure maybe there is not much point?
-The unit of measurement is nmol/L in the study and ng/ml in the DS. So the units are converted to harmonize. 
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. There are 2 variables of vitmain D available, the Odin standadised values were used for harmonization.  
+
 
 **R script**:  
 ```{r, echo=TRUE}
-table(LASA1C$cmvitd25st, useNA = "always")
-table(LASA1C$cmvitd25, useNA = "always")
-
-summary(LASA1C$cmvitd25)
-summary(LASA1C$cmvitd25st)
-
-bio_LASA1_1$bio_vitd_1<-LASA1C$cmvitd25st
-#1 ng/ml =0.400641 nmol/l
-table(bio_LASA1_1$bio_vitd_1, useNA = "always")
-bio_LASA1_1$bio_vitd_1<-bio_LASA1_1$bio_vitd_1*0.400641
-table(bio_LASA1_1$bio_vitd_1, useNA = "always")
-summary(bio_LASA1_1$bio_vitd_1)
-
+# conversion: 0.400641
+bio_LASA1_1$bio_vitd_1 <- LASA1C$cmvitd25st
+bio_LASA1_1[bio_LASA1_1$bio_vitd_1 == -1 | 
+            bio_LASA1_1$bio_vitd_1 == -2,]$bio_vitd_1 <- NA
+bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1*0.400641
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_2    
@@ -619,7 +601,6 @@ summary(bio_LASA1_1$bio_vitd_1)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -633,7 +614,6 @@ summary(bio_LASA1_1$bio_vitd_1)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -647,7 +627,6 @@ summary(bio_LASA1_1$bio_vitd_1)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -657,12 +636,14 @@ summary(bio_LASA1_1$bio_vitd_1)
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization status**:  complete    
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. There are 2 variables of vitmain D available, the Odin standadised values were used for harmonization.    
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
-
+bio_LASA1_6$bio_vitd_6 <- LASA1G$gmvitd25st
+bio_LASA1_6[bio_LASA1_6$bio_vitd_6 == -1 | 
+            bio_LASA1_6$bio_vitd_6 == -2,]$bio_vitd_6 <-NA
+bio_LASA1_6$bio_vitd_6 <- bio_LASA1_6$bio_vitd_6*0.400641
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: BIO_VitD_6    
@@ -670,21 +651,10 @@ summary(bio_LASA1_1$bio_vitd_1)
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
 **Category coding**: 
-**Harmonization status**:  complete  
+**Harmonization status**:  impossible    
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-
-table(LASA1G$gmvitd25st, useNA = "always")
-table(LASA1G$gmvitd25, useNA = "always")
-
-summary(LASA1G$gmvitd25st)
-summary(LASA1G$gmvitd25)
-
-bio_LASA1_6$bio_vitd_6<-LASA1G$gmvitd25st
-bio_LASA1_6$bio_vitd_6<-bio_LASA1_6$bio_vitd_6*0.400641
-table(bio_LASA1_6$bio_vitd_6, useNA = "always")
-summary(bio_LASA1_6$bio_vitd_6)
 
 ```
 ### **Variable label**: Triglycerides 
