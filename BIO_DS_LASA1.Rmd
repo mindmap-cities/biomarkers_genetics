@@ -46,7 +46,7 @@ bio_LASA1_6 <- data.frame(id = LASA1G$id)
 # Non-genetic Biomarkers subdomain
 
 ### **Variable label**: C-Reactive Protbein  
-**Variable name**: BIO_CRP_0    
+**Variable name**: bio_crp_0    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
@@ -64,7 +64,7 @@ bio_LASA1_0[bio_LASA1_0$bio_crp_0 == -1 |
             bio_LASA1_0$bio_crp_0 == -2,]$bio_crp_0 <- NA
 ```
 ### **Variable label**: C-Reactive Protein  
-**Variable name**: BIO_CRP_1    
+**Variable name**: bio_crp_1    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
@@ -83,7 +83,7 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 ```
 
 ### **Variable label**: C-Reactive Protein  
-**Variable name**: BIO_CRP_2    
+**Variable name**: bio_crp_2    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
@@ -96,7 +96,7 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 
 ```
 ### **Variable label**: C-Reactive Protein  
-**Variable name**: BIO_CRP_3    
+**Variable name**: bio_crp_3    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L   
@@ -109,7 +109,7 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 
 ```
 ### **Variable label**: C-Reactive Protein  
-**Variable name**: BIO_CRP_4    
+**Variable name**: bio_crp_4    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
@@ -122,7 +122,7 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 
 ```
 ### **Variable label**: C-Reactive Protein  
-**Variable name**: BIO_CRP_5    
+**Variable name**: bio_crp_5    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
@@ -135,7 +135,7 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 
 ```
 ### **Variable label**: C-Reactive Protein  
-**Variable name**: BIO_CRP_6    
+**Variable name**: bio_crp_6    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
@@ -148,7 +148,7 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
-**Variable name**: BIO_TSH_0    
+**Variable name**: bio_tsh_0    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
@@ -168,7 +168,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tsh_0 == -1 |
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
-**Variable name**: BIO_TSH_1    
+**Variable name**: bio_tsh_1    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
@@ -191,7 +191,7 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
             bio_LASA1_1$bio_tsh_1 == -2,]$bio_tsh_1 <- NA
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
-**Variable name**: BIO_TSH_2    
+**Variable name**: bio_tsh_2    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
@@ -204,7 +204,7 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
-**Variable name**: BIO_TSH_3    
+**Variable name**: bio_tsh_3    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
@@ -217,7 +217,7 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
-**Variable name**: BIO_TSH_4    
+**Variable name**: bio_tsh_4    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
@@ -230,7 +230,7 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
-**Variable name**: BIO_TSH_5    
+**Variable name**: bio_tsh_5    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
@@ -243,7 +243,7 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
-**Variable name**: BIO_TSH_6    
+**Variable name**: bio_tsh_6    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
@@ -256,7 +256,7 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
 
 ```
 ### **Variable label**: Thyroxine  
-**Variable name**: BIO_T4_0    
+**Variable name**: bio_t4_0    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
@@ -273,7 +273,7 @@ bio_LASA1_0[bio_LASA1_0$bio_t4_0 == -1 |
             bio_LASA1_0$bio_t4_0 == -2,]$bio_t4_0 <- NA
 ```
 ### **Variable label**: Thyroxine  
-**Variable name**: BIO_T4_1    
+**Variable name**: bio_t4_1    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
@@ -292,7 +292,7 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
             bio_LASA1_1$bio_t4_1==-2,]$bio_t4_1 <- NA
 ```
 ### **Variable label**: Thyroxine  
-**Variable name**: BIO_T4_2    
+**Variable name**: bio_t4_2    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
@@ -305,7 +305,7 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
 
 ```
 ### **Variable label**: Thyroxine  
-**Variable name**: BIO_T4_3    
+**Variable name**: bio_t4_3    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
@@ -318,7 +318,7 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
 
 ```
 ### **Variable label**: Thyroxine  
-**Variable name**: BIO_T4_4    
+**Variable name**: bio_t4_4    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
@@ -331,7 +331,7 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
 
 ```
 ### **Variable label**: Thyroxine  
-**Variable name**: BIO_T4_5    
+**Variable name**: bio_t4_5    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
@@ -344,7 +344,7 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
 
 ```
 ### **Variable label**: Thyroxine  
-**Variable name**: BIO_T4_6    
+**Variable name**: bio_t4_6    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
@@ -357,7 +357,7 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
 
 ```
 ### **Variable label**: Albumin  
-**Variable name**: BIO_ALB_0    
+**Variable name**: bio_alb_0    
 **Variable description**:Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
@@ -372,7 +372,7 @@ bio_LASA1_0[bio_LASA1_0$bio_alb_0 == -1 |
             bio_LASA1_0$bio_alb_0 == -2,]$bio_alb_0 <- NA
 ```
 ### **Variable label**: Albumin  
-**Variable name**: BIO_ALB_1    
+**Variable name**: bio_alb_1    
 **Variable description**:Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
@@ -387,7 +387,7 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
             bio_LASA1_1$bio_alb_1 == -2,]$bio_alb_1 <- NA
 ```
 ### **Variable label**: Albumin  
-**Variable name**: BIO_ALB_2    
+**Variable name**: bio_alb_2    
 **Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
@@ -400,7 +400,7 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 
 ```
 ### **Variable label**: Albumin  
-**Variable name**: BIO_ALB_3    
+**Variable name**: bio_alb_3    
 **Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
@@ -413,7 +413,7 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 
 ```
 ### **Variable label**: Albumin  
-**Variable name**: BIO_ALB_4    
+**Variable name**: bio_alb_4    
 **Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
@@ -427,7 +427,7 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 
 ```
 ### **Variable label**: Albumin  
-**Variable name**: BIO_ALB_5    
+**Variable name**: bio_alb_5    
 **Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
@@ -440,7 +440,7 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 
 ```
 ### **Variable label**: Albumin  
-**Variable name**: BIO_ALB_6    
+**Variable name**: bio_alb_6    
 **Variable description**:Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
@@ -455,7 +455,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
             bio_LASA1_6$bio_alb_6 == -2,]$bio_alb_6 <- NA
 ```
 ### **Variable label**: Alanine Aminotransferase  
-**Variable name**: BIO_ALT_0    
+**Variable name**: bio_alt_0    
 **Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
@@ -468,7 +468,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
-**Variable name**: BIO_ALT_1    
+**Variable name**: bio_alt_1    
 **Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
@@ -481,7 +481,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
-**Variable name**: BIO_ALT_2    
+**Variable name**: bio_alt_2    
 **Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
@@ -494,7 +494,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
-**Variable name**: BIO_ALT_3    
+**Variable name**: bio_alt_3    
 **Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
@@ -507,7 +507,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
-**Variable name**: BIO_ALT_4    
+**Variable name**: bio_alt_4    
 **Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
@@ -520,7 +520,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
-**Variable name**: BIO_ALT_5    
+**Variable name**: bio_alt_5    
 **Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
@@ -533,7 +533,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
-**Variable name**: BIO_ALT_6    
+**Variable name**: bio_alt_6    
 **Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: U/L  
@@ -546,7 +546,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 
 ```
 ### **Variable label**: Vitamin D 
-**Variable name**: BIO_VitD_0    
+**Variable name**: bio_vitd_0    
 **Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
@@ -558,7 +558,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 
 ```
 ### **Variable label**: Vitamin D 
-**Variable name**: BIO_VitD_1    
+**Variable name**: bio_vitd_1    
 **Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
@@ -577,7 +577,7 @@ bio_LASA1_1[bio_LASA1_1$bio_vitd_1 == -1 |
 bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1*0.400641
 ```
 ### **Variable label**: Vitamin D 
-**Variable name**: BIO_VitD_2    
+**Variable name**: bio_vitd_2    
 **Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
@@ -590,7 +590,7 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1*0.400641
 
 ```
 ### **Variable label**: Vitamin D 
-**Variable name**: BIO_VitD_3    
+**Variable name**: bio_vitd_3    
 **Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
@@ -603,7 +603,7 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1*0.400641
 
 ```
 ### **Variable label**: Vitamin D 
-**Variable name**: BIO_VitD_4    
+**Variable name**: bio_vitd_4    
 **Variable description**: Vitamin D measured in serum (fresh and frozen).      
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
@@ -616,7 +616,7 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1*0.400641
 
 ```
 ### **Variable label**: Vitamin D 
-**Variable name**: BIO_VitD_5    
+**Variable name**: bio_vitd_5    
 **Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
@@ -632,7 +632,7 @@ bio_LASA1_6[bio_LASA1_6$bio_vitd_6 == -1 |
 bio_LASA1_6$bio_vitd_6 <- bio_LASA1_6$bio_vitd_6*0.400641
 ```
 ### **Variable label**: Vitamin D 
-**Variable name**: BIO_VitD_6    
+**Variable name**: bio_vitd_6    
 **Variable description**: Vitamin D measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
@@ -644,7 +644,7 @@ bio_LASA1_6$bio_vitd_6 <- bio_LASA1_6$bio_vitd_6*0.400641
 
 ```
 ### **Variable label**: Triglycerides 
-**Variable name**: BIO_TG_0    
+**Variable name**: bio_tg_0    
 **Variable description**: Triglycerides measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
@@ -659,7 +659,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
             bio_LASA1_0$bio_tg_0 == -2,]$bio_tg_0 <- NA
 ```
 ### **Variable label**: Triglycerides 
-**Variable name**: BIO_TG_1    
+**Variable name**: bio_tg_1    
 **Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
@@ -685,7 +685,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 #             bio_LASA1_1$bio_tg_1 == -2,]$bio_tg_1 <- NA
 ```
 ### **Variable label**: Triglycerides 
-**Variable name**: BIO_TG_2    
+**Variable name**: bio_tg_2    
 **Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
@@ -699,7 +699,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Triglycerides 
-**Variable name**: BIO_TG_3    
+**Variable name**: bio_tg_3    
 **Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
@@ -712,7 +712,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Triglycerides 
-**Variable name**: BIO_TG_4    
+**Variable name**: bio_tg_4    
 **Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
@@ -724,7 +724,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Triglycerides 
-**Variable name**: BIO_TG_5    
+**Variable name**: bio_tg_5    
 **Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
@@ -736,7 +736,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Triglycerides 
-**Variable name**: BIO_TG_6    
+**Variable name**: bio_tg_6    
 **Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
@@ -752,7 +752,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 # Genetic Biomarker subdomain
 
 ### **Variable label**: RS7412 
-**Variable name**: BIO_RS7412_0   
+**Variable name**: bio_rs7412_0   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A
@@ -772,7 +772,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: RS7412 
-**Variable name**: BIO_RS7412_1   
+**Variable name**: bio_rs7412_1   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A
@@ -792,7 +792,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: RS7412 
-**Variable name**: BIO_RS7412_2   
+**Variable name**: bio_rs7412_2   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A 
@@ -812,7 +812,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: RS7412 
-**Variable name**: BIO_RS7412_3   
+**Variable name**: bio_rs7412_3   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -832,7 +832,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: RS7412 
-**Variable name**: BIO_RS7412_4   
+**Variable name**: bio_rs7412_4   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -852,7 +852,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: RS7412 
-**Variable name**: BIO_RS7412_5   
+**Variable name**: bio_rs7412_5   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -872,7 +872,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: RS7412 
-**Variable name**: BIO_RS7412_6   
+**Variable name**: bio_rs7412_6   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -892,7 +892,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs429358 
-**Variable name**: BIO_Rs429358_0   
+**Variable name**: bio_rs429358_0   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -912,7 +912,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs429358 
-**Variable name**: BIO_Rs429358_1   
+**Variable name**: bio_rs429358_1   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -932,7 +932,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs429358 
-**Variable name**: BIO_Rs429358_2   
+**Variable name**: bio_rs429358_2   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -952,7 +952,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs429358 
-**Variable name**: BIO_Rs429358_3   
+**Variable name**: bio_rs429358_3   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -972,7 +972,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs429358 
-**Variable name**: BIO_Rs429358_4   
+**Variable name**: bio_rs429358_4   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -992,7 +992,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs429358 
-**Variable name**: BIO_Rs429358_5   
+**Variable name**: bio_rs429358_5   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1012,7 +1012,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs429358 
-**Variable name**: BIO_Rs429358_6   
+**Variable name**: bio_rs429358_6   
 **Variable description**: RS7412 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1032,7 +1032,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs440446 
-**Variable name**: BIO_Rs440446_0   
+**Variable name**: bio_rs440446_0   
 **Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1052,7 +1052,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs440446 
-**Variable name**: BIO_Rs440446_1   
+**Variable name**: bio_rs440446_1   
 **Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1072,7 +1072,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs440446 
-**Variable name**: BIO_Rs440446_2   
+**Variable name**: bio_rs440446_2   
 **Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1092,7 +1092,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs440446 
-**Variable name**: BIO_Rs440446_3   
+**Variable name**: bio_rs440446_3   
 **Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1112,7 +1112,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs440446 
-**Variable name**: BIO_Rs440446_4   
+**Variable name**: bio_rs440446_4   
 **Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1132,7 +1132,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs440446 
-**Variable name**: BIO_Rs440446_5   
+**Variable name**: bio_rs440446_5   
 **Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1152,7 +1152,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs440446 
-**Variable name**: BIO_Rs440446_6   
+**Variable name**: bio_rs440446_6   
 **Variable description**: Rs440446 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1172,7 +1172,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs6265
-**Variable name**: BIO_Rs6265_0   
+**Variable name**: bio_rs6265_0   
 **Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1192,7 +1192,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs6265
-**Variable name**: BIO_Rs6265_1   
+**Variable name**: bio_rs6265_1   
 **Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1212,7 +1212,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs6265
-**Variable name**: BIO_Rs6265_2   
+**Variable name**: bio_rs6265_2   
 **Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1232,7 +1232,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs6265
-**Variable name**: BIO_Rs6265_3   
+**Variable name**: bio_rs6265_3   
 **Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1252,7 +1252,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs6265
-**Variable name**: BIO_Rs6265_4   
+**Variable name**: bio_rs6265_4   
 **Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1272,7 +1272,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs6265
-**Variable name**: BIO_Rs6265_5   
+**Variable name**: bio_rs6265_5   
 **Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1293,7 +1293,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 ```
 
 ### **Variable label**: Rs6265
-**Variable name**: BIO_Rs6265_6   
+**Variable name**: bio_rs6265_6   
 **Variable description**: Rs6265 Polymorphism of BDNF Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1313,7 +1313,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs11156739
-**Variable name**: BIO_Rs11156739_0   
+**Variable name**: bio_rs11156739_0   
 **Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1333,7 +1333,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs11156739
-**Variable name**: BIO_Rs11156739_1   
+**Variable name**: bio_rs11156739_1   
 **Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1353,7 +1353,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs11156739
-**Variable name**: BIO_Rs11156739_2   
+**Variable name**: bio_rs11156739_2   
 **Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1373,7 +1373,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs11156739
-**Variable name**: BIO_Rs11156739_3   
+**Variable name**: bio_rs11156739_3   
 **Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1393,7 +1393,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs11156739
-**Variable name**: BIO_Rs11156739_4   
+**Variable name**: bio_rs11156739_4   
 **Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1413,7 +1413,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs11156739
-**Variable name**: BIO_Rs11156739_5   
+**Variable name**: bio_rs11156739_5   
 **Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
@@ -1433,7 +1433,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 ```
 ### **Variable label**: Rs11156739
-**Variable name**: BIO_Rs11156739_6   
+**Variable name**: bio_rs11156739_6   
 **Variable description**: Rs11156739 Polymorphism of PSEN2 Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
