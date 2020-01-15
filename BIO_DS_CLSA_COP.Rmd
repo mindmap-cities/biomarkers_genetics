@@ -15,15 +15,15 @@ opal.assign.table.tibble(erasmus_opal, 'CoP4_Baseline','CLSA_1.CoP4_Baseline', v
 
 CLSA_cop0 <- opal.execute(erasmus_opal,'CoP4_Baseline')
 
-opal.assign.table.tibble(erasmus_opal, 'CoP_FU1','CLSA_1.CoP_FU1',  variables=list())
+#opal.assign.table.tibble(erasmus_opal, 'CoP_FU1','CLSA_1.CoP_FU1',  variables=list())
 
-CLSA_cop1 <- opal.execute(erasmus_opal,'CoP_FU1')
+#CLSA_cop1 <- opal.execute(erasmus_opal,'CoP_FU1')
 
 ```
 ## Assign participant id as first column of your harmonized dataframes
 ```{r, echo=FALSE}
 bio_CLSA_COP_0 <- data.frame(id = CLSA_cop0$id)
-bio_CLSA_COP_1 <- data.frame(id = CLSA_cop1$id)
+#bio_CLSA_COP_1 <- data.frame(id = CLSA_cop1$id)
 ```
 ## When you are done with your work, logout of Opal server
 ```{r, echo=FALSE}
