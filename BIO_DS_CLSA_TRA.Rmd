@@ -11,19 +11,19 @@ library(data.table)
 # Create an opal object with the login information
 erasmus_opal <-opal.login()
 
-opal.assign.table.tibble(erasmus_opal, 'Tra3_4_Baseline','CLSA_1.Tra3_4_Baseline', variables =list())
+#opal.assign.table.tibble(erasmus_opal, 'Tra3_4_Baseline','CLSA_1.Tra3_4_Baseline', variables =list())
 
-CLSA_tra0 <- opal.execute(erasmus_opal,'Tra3_4_Baseline')
+#CLSA_tra0 <- opal.execute(erasmus_opal,'Tra3_4_Baseline')
 
-opal.assign.table.tibble(erasmus_opal, 'Tra_FU1','CLSA_1.Tra_FU1',  variables=list())
+#opal.assign.table.tibble(erasmus_opal, 'Tra_FU1','CLSA_1.Tra_FU1',  variables=list())
 
-CLSA_tra1 <- opal.execute(erasmus_opal,'Tra_FU1')
+#CLSA_tra1 <- opal.execute(erasmus_opal,'Tra_FU1')
 
 ```
 ## Assign participant id as first column of your harmonized dataframes
 ```{r, echo=FALSE}
-bio_CLSA_TRA_0 <- data.frame(id = CLSA_tra0$id)
-bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
+#bio_CLSA_TRA_0 <- data.frame(id = CLSA_tra0$id)
+#bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 ```
 ## When you are done with your work, logout of Opal server
 ```{r, echo=FALSE}
@@ -42,11 +42,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mg/L  
 **Category coding**:     
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only)  
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -56,7 +55,7 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mg/L  
 **Category coding**:     
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
@@ -75,7 +74,6 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -85,11 +83,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mg/L   
 **Category coding**:   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -99,11 +96,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mg/L  
 **Category coding**:   
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -113,11 +109,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mg/L  
 **Category coding**:     
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -127,11 +122,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mg/L  
 **Category coding**:   
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -141,11 +135,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mU/L  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -155,11 +148,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mU/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -169,11 +161,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mU/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -183,11 +174,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mU/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -197,11 +187,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mU/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -211,11 +200,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mU/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -225,11 +213,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mU/L  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**:  impossilbe  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -239,11 +226,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: pMol/L  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -253,11 +239,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: pMol/L  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -267,11 +252,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: pMol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -281,11 +265,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: pMol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -295,11 +278,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: pMol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -309,11 +291,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: pMol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Thyroxine  
@@ -323,11 +304,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: pMol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -337,11 +317,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -351,11 +330,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -365,11 +343,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -379,11 +356,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -394,11 +370,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Category coding**: N/A (continuous variable)  
 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Albumin  
@@ -408,11 +383,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Albumin  
@@ -422,11 +396,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -436,11 +409,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: U/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -450,11 +422,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: U/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -464,11 +435,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: U/L  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -478,11 +448,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: U/L  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -492,11 +461,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: U/L  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -506,11 +474,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: U/L  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Alanine Aminotransferase  
@@ -520,11 +487,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: U/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -533,11 +499,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
 **Category coding**: 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -547,11 +512,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -561,11 +525,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -575,11 +538,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -589,11 +551,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: ng/ml  
 **Category coding**:
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -603,11 +564,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Vitamin D 
@@ -616,11 +576,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
 **Category coding**: 
-**Harmonization status**:  
+**Harmonization status**: imossible   
 **Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -630,11 +589,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mmol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only) 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -643,11 +601,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
 **Category coding**: 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -657,11 +614,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mmol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible    
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -671,11 +627,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mmol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -684,11 +639,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
 **Category coding**: 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -697,11 +651,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
 **Category coding**: 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 ### **Variable label**: Triglycerides 
@@ -711,11 +664,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 **Variable unit**: mmol/L  
 **Category coding**: 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-#This is w### **Variable label**: Albumin  
 
 ```
 
@@ -734,11 +686,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -754,11 +705,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -774,11 +724,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -794,11 +743,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -814,11 +762,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -834,11 +781,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -854,11 +800,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -874,11 +819,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -894,11 +838,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -914,11 +857,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -934,11 +876,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -954,11 +895,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -974,11 +914,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive 
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -994,11 +933,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1014,11 +952,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1034,11 +971,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1054,11 +990,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1074,11 +1009,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive  
 
-**Harmonization status**:  
+**Harmonization status**: impossible    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1094,11 +1028,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1114,11 +1047,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1134,11 +1066,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1154,11 +1085,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1174,11 +1104,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1194,11 +1123,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1214,11 +1142,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1234,11 +1161,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1254,11 +1180,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 
@@ -1275,11 +1200,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1295,11 +1219,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1315,11 +1238,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1335,11 +1257,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1355,11 +1276,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1375,11 +1295,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1395,11 +1314,10 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1415,10 +1333,9 @@ bio_CLSA_TRA_1 <- data.frame(id = CLSA_tra1$id)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
