@@ -16,16 +16,35 @@ erasmus_opal <-opal.login()
 opal.assign.table.tibble(erasmus_opal, 'HUNT1', 'HUNT.HUNT1',variables = list(''))
 HUNT1 <- opal.execute(erasmus_opal,'HUNT1')
 
+
+opal.assign.table.tibble(erasmus_opal, 'HUNT1GWAS', 'HUNT.HUNT1GWAS' )
+HUNT1_G <- opal.execute(erasmus_opal,'HUNT1GWAS')
+
+
+
 # HUNT2
 opal.assign.table.tibble(erasmus_opal, 'HUNT2', 'HUNT.HUNT2',variables = list('SeTrig_NT2BLM'))
 HUNT2 <- opal.execute(erasmus_opal,'HUNT2')
 
+opal.assign.table.tibble(erasmus_opal, 'HUNT2GWAS', 'HUNT.HUNT2GWAS' )
+HUNT2_G <- opal.execute(erasmus_opal,'HUNT2GWAS')
+
+
 # HUNT3
 opal.assign.table.tibble(erasmus_opal, 'HUNT3', 'HUNT.HUNT3',variables = list('SemicroCRP_NT3BLM','SeTSH','SeT4_NT3BLM','SeTrig'))
-HUNT1 <- opal.execute(erasmus_opal,'HUNT3')
+HUNT3 <- opal.execute(erasmus_opal,'HUNT3')
+
+opal.assign.table.tibble(erasmus_opal, 'HUNT3GWAS', 'HUNT.HUNT3GWAS' )
+HUNT3_G <- opal.execute(erasmus_opal,'HUNT3GWAS')
+
 ```
 ## Assign participant id as first column of your harmonized dataframes
 ```{r, echo=FALSE}
+
+HUNT1<-merge(HUNT1, HUNT1_G, by="id", all=TRUE)
+HUNT2<-merge(HUNT2, HUNT2_G, by="id", all=TRUE)
+HUNT3<-merge(HUNT3, HUNT3_G, by="id", all=TRUE)
+
 bio_HUNT_0 <- data.frame(id = HUNT1$id)
 bio_HUNT_1 <- data.frame(id = HUNT2$id)
 bio_HUNT_2 <- data.frame(id = HUNT3$id)
@@ -760,11 +779,12 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive 
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+
+table(HUNT1$rs7412_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: RS7412 
@@ -780,11 +800,11 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT2$rs7412_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: RS7412 
@@ -800,11 +820,11 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT3$rs7412_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: RS7412 
@@ -889,7 +909,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_0   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -900,16 +920,15 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+table(HUNT1$rs429358_HUNTGWAS, useNA="always")
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_1   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -920,11 +939,11 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT2$rs429358_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: Rs429358 
@@ -940,16 +959,16 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT3$rs429358_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_3   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -969,7 +988,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_4   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1009,7 +1028,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_6   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1040,12 +1059,12 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+table(HUNT1$rs440446, useNA="always")
+summary(HUNT1$rs440446, useNA="always")
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: bio_rs440446_1   
@@ -1060,11 +1079,12 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT2$rs440446, useNA="always")
+summary(HUNT2$rs440446, useNA="always")
 
 ```
 ### **Variable label**: Rs440446 
@@ -1080,11 +1100,12 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT3$rs440446, useNA="always")
+summary(HUNT3$rs440446, useNA="always")
 
 ```
 ### **Variable label**: Rs440446 
@@ -1180,12 +1201,11 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+table(HUNT1$rs6265_HUNTGWAS, useNA="always")
 ```
 ### **Variable label**: Rs6265
 **Variable name**: bio_rs6265_1   
@@ -1200,11 +1220,11 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT2$rs6265_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: Rs6265
@@ -1224,7 +1244,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT3$rs6265_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: Rs6265
@@ -1321,12 +1341,12 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+table(HUNT1$rs11156739, useNA="always")
+summary(HUNT1$rs11156739)
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: bio_rs11156739_1   
@@ -1341,11 +1361,12 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive  
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
+table(HUNT2$rs11156739, useNA="always")
+summary(HUNT2$rs11156739)
 
 ```
 ### **Variable label**: Rs11156739
@@ -1361,12 +1382,12 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  impossible  
+**Harmonization status**:    
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
-
+table(HUNT3$rs11156739, useNA="always")
+summary(HUNT3$rs11156739)
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: bio_rs11156739_3   

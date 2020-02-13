@@ -936,7 +936,7 @@ summary(bio_LASA2_0$bio_tg_0)
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_0   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -956,7 +956,7 @@ summary(bio_LASA2_0$bio_tg_0)
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_1   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -976,7 +976,7 @@ summary(bio_LASA2_0$bio_tg_0)
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_2   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -996,7 +996,7 @@ summary(bio_LASA2_0$bio_tg_0)
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_3   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1016,7 +1016,7 @@ summary(bio_LASA2_0$bio_tg_0)
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_4   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1036,7 +1036,7 @@ summary(bio_LASA2_0$bio_tg_0)
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_5   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1056,7 +1056,7 @@ summary(bio_LASA2_0$bio_tg_0)
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: BIO_Rs429358_6   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  

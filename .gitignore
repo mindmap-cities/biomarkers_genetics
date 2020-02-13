@@ -7,3 +7,5 @@
 *.R
 *_validation.Rmd
 BIO_DS_LASA1_validation.Rmd
+*.csv
+*.txt
