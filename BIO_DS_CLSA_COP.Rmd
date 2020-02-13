@@ -814,7 +814,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_0   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -834,7 +834,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_1   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -854,7 +854,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_2   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -874,7 +874,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_3   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -894,7 +894,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_4   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -914,7 +914,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_5   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -934,7 +934,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_6   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
