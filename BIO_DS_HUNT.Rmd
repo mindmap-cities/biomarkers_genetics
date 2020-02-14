@@ -13,8 +13,8 @@ library(data.table)
 erasmus_opal <-opal.login()
 #Login to Opal server and assign the content of the LASA table(s) to your RStudio environment
 # HUNT1
-opal.assign.table.tibble(erasmus_opal, 'HUNT1', 'HUNT.HUNT1',variables = list(''))
-HUNT1 <- opal.execute(erasmus_opal,'HUNT1')
+# opal.assign.table.tibble(erasmus_opal, 'HUNT1', 'HUNT.HUNT1',variables = list(''))
+# HUNT1 <- opal.execute(erasmus_opal,'HUNT1')
 
 
 opal.assign.table.tibble(erasmus_opal, 'HUNT1GWAS', 'HUNT.HUNT1GWAS' )
@@ -31,7 +31,7 @@ HUNT2_G <- opal.execute(erasmus_opal,'HUNT2GWAS')
 
 
 # HUNT3
-opal.assign.table.tibble(erasmus_opal, 'HUNT3', 'HUNT.HUNT3',variables = list('SemicroCRP_NT3BLM','SeTSH','SeT4_NT3BLM','SeTrig'))
+opal.assign.table.tibble(erasmus_opal, 'HUNT3', 'HUNT.HUNT3',variables = list('SemicroCRP_NT3BLM','SeTSH','SeT4_NT3BLM','SeTrig','SeTSH_NT3BLM'))
 HUNT3 <- opal.execute(erasmus_opal,'HUNT3')
 
 opal.assign.table.tibble(erasmus_opal, 'HUNT3GWAS', 'HUNT.HUNT3GWAS' )
@@ -41,11 +41,11 @@ HUNT3_G <- opal.execute(erasmus_opal,'HUNT3GWAS')
 ## Assign participant id as first column of your harmonized dataframes
 ```{r, echo=FALSE}
 
-HUNT1<-merge(HUNT1, HUNT1_G, by="id", all=TRUE)
+#HUNT1<-merge(HUNT1, HUNT1_G, by="id", all=TRUE)
 HUNT2<-merge(HUNT2, HUNT2_G, by="id", all=TRUE)
 HUNT3<-merge(HUNT3, HUNT3_G, by="id", all=TRUE)
 
-bio_HUNT_0 <- data.frame(id = HUNT1$id)
+bio_HUNT_0 <- data.frame(id = HUNT1_G$id)
 bio_HUNT_1 <- data.frame(id = HUNT2$id)
 bio_HUNT_2 <- data.frame(id = HUNT3$id)
 ```
@@ -66,16 +66,11 @@ bio_HUNT_2 <- data.frame(id = HUNT3$id)
 **Variable unit**: mg/L  
 **Category coding**:     
 
-**Harmonization status**:  complete
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only).  Two variables used for harmonization. First variable is from frozen blood and participants were fasting with tea and toast. Second variable is from fresh blood and participants were non-fasting. Values from both variables are closely correlated. Values from frozen blood and fasting with tea and toast were taken first, and if there were missing values, values were taken from fresh blood and non-fasting.    
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only).   
 **R script**:  
 ```{r, echo=TRUE}
-bio_LASA1_0$bio_crp_0 <- ifelse(
-                          is.na(LASA1B$bmhscrp), 
-                                LASA1B$bmcrp, 
-                                LASA1B$bmhscrp)
-bio_LASA1_0[bio_LASA1_0$bio_crp_0 == -1 | 
-            bio_LASA1_0$bio_crp_0 == -2,]$bio_crp_0 <- NA
+
 ```
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: bio_crp_1    
@@ -84,16 +79,11 @@ bio_LASA1_0[bio_LASA1_0$bio_crp_0 == -1 |
 **Variable unit**: mg/L  
 **Category coding**:     
 
-**Harmonization status**:  complete
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. Two variables used for harmonization. First variable is from frozen blood and participants were fasting. Second variable is from fresh blood and participants were fasting with tea and toast. Values from both variables are closely correlated. Values from frozen blood and fasting participants were taken first, and if there were missing values, values were taken from fresh blood and participants fasting with tea and toast.     
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS.  
 **R script**:  
 ```{r, echo=TRUE}
-bio_LASA1_1$bio_crp_1 <- ifelse(
-                          is.na(LASA1C$cmhscrp), 
-                                LASA1C$cmcrp,
-                                LASA1C$cmhscrp)
-bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 | 
-            bio_LASA1_1$bio_crp_1 == -2,]$bio_crp_1<-NA
+
 ```
 
 ### **Variable label**: C-Reactive Protein  
@@ -168,17 +158,11 @@ bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 |
 **Variable unit**: mU/L  
 **Category coding**:
 
-**Harmonization status**: complete     
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. Study-specific variable is taken from fresh blood and participants were non-fasting.    
+**Harmonization status**: impossible       
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
 
 **R script**:  
 ```{r, echo=TRUE}
-
-#**Question for cohort**: LASA documentation states the information on thyroid hormone is collected only at time point C, but we have it at time B. In time point C, the measurement they refer to for thyroid function is cmtsh2, not cmtsh. bmths, cmths measures are referred under "Routine measurements: Albumin and cholesterol". What is the difference?
-  
-bio_LASA1_0$bio_tsh_0 <- LASA1B$bmtsh
-bio_LASA1_0[bio_LASA1_0$bio_tsh_0 == -1 |
-            bio_LASA1_0$bio_tsh_0 == -2,]$bio_tsh_0 <- NA
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -188,21 +172,13 @@ bio_LASA1_0[bio_LASA1_0$bio_tsh_0 == -1 |
 **Variable unit**: mU/L  
 **Category coding**: 
 
-**Harmonization status**:  complete
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. Values from frozen and fresh are closely correlated so both variables were used for harmoniztation. Values from frozen were taken first, and if there were missing values, values were taken from fresh.    
+**Harmonization status**:  impossible  
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
 
 
 **R script**:  
 ```{r, echo=TRUE}
 
-#**Question for cohort**: There are two variables: cmtsh: Blood: TSH mU/L abd cmtsh2: thyroid-stimulating hormone (mU/l). There are a lot more missing values in cmtsh, and the documentation refers to cmtsh2 for TSH. Also, cmtsh2 is not in the LASA_Laboratory measures MINDMAP_WP7_edit_V2.xlsx that was sent. In LASA study documentation, cmtsh is under Routine measurements: Albumin and cholesterol category. Is it okay to combine both variables?
-
-bio_LASA1_1$bio_tsh_1 <- ifelse(
-                          is.na(LASA1C$cmtsh2),
-                                LASA1C$cmtsh,
-                                LASA1C$cmtsh2)
-bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 | 
-            bio_LASA1_1$bio_tsh_1 == -2,]$bio_tsh_1 <- NA
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: bio_tsh_2    
@@ -215,7 +191,7 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
+bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: bio_tsh_3    
@@ -276,15 +252,10 @@ bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 |
 **Variable unit**: pMol/L  
 **Category coding**:
 
-**Harmonization status**:  complete      
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. Only values from fresh are available at this wave. Only values from fresh were available for this wave.  
-**R script**:  
+**Harmonization status**:  impossible        
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
 ```{r, echo=TRUE}
-#**Question for cohort**: LASA documentation states the information on thyroid hormone is collected only at time point C, but we have it at time B. What is bmfreet4, the variable at time B?
 
-bio_LASA1_0$bio_t4_0 <- LASA1B$bmfreet4
-bio_LASA1_0[bio_LASA1_0$bio_t4_0 == -1 |
-            bio_LASA1_0$bio_t4_0 == -2,]$bio_t4_0 <- NA
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: bio_t4_1    
@@ -293,17 +264,12 @@ bio_LASA1_0[bio_LASA1_0$bio_t4_0 == -1 |
 **Variable unit**: pMol/L  
 **Category coding**:
 
-**Harmonization status**:  complete  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. Values from frozen and fresh are closely correlated so both variables were used for harmoniztation. Values from frozen were taken first, and if there were missing values, values were taken from fresh.    
+**Harmonization status**:  impossible    
+**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.    
 
 **R script**:  
 ```{r, echo=TRUE}
-bio_LASA1_1$bio_t4_1 <- ifelse(
-                         is.na(LASA1C$cmfreet4),
-                               LASA1C$cmft4,
-                               LASA1C$cmfreet4)
-bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 | 
-            bio_LASA1_1$bio_t4_1==-2,]$bio_t4_1 <- NA
+
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: bio_t4_2    
@@ -312,11 +278,11 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
 **Variable unit**: pMol/L  
 **Category coding**: 
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  complete    
 **Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
+bio_HUNT_2$bio_t4_2 <- summary(HUNT3$SeT4_NT3BLM)
 ```
 ### **Variable label**: Thyroxine  
 **Variable name**: bio_t4_3    
@@ -377,13 +343,11 @@ bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 |
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  complete  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS. Study-specific variable is taken from fresh blood and participants were non-fasting.       
+**Harmonization status**:  impossible    
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS.    
 **R script**:  
 ```{r, echo=TRUE}
-bio_LASA1_0$bio_alb_0<-LASA1B$bmalbumi
-bio_LASA1_0[bio_LASA1_0$bio_alb_0 == -1 | 
-            bio_LASA1_0$bio_alb_0 == -2,]$bio_alb_0 <- NA
+
 ```
 ### **Variable label**: Albumin  
 **Variable name**: bio_alb_1    
@@ -392,14 +356,11 @@ bio_LASA1_0[bio_LASA1_0$bio_alb_0 == -1 |
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  complete 
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS. Study-specific variable is taken from fresh blood and participants were fasting with tea and toast.       
+**Harmonization status**:  impossible   
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS.  
 **R script**:  
 ```{r, echo=TRUE}
-#**Questions to cohort**: variablecmalbcon = Blood: albumin converted to BCG method (Adam, Oss) used for harmonization?
-bio_LASA1_1$bio_alb_1<-LASA1C$cmalbumi
-bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 | 
-            bio_LASA1_1$bio_alb_1 == -2,]$bio_alb_1 <- NA
+
 ```
 ### **Variable label**: Albumin  
 **Variable name**: bio_alb_2    
@@ -462,12 +423,10 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 **Category coding**: 
 
 **Harmonization status**:  complete    
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS. Study-specific variable is taken from fresh blood and participants were fasting.  
+**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS.  
 **R script**:  
 ```{r, echo=TRUE}
-bio_LASA1_6$bio_alb_6<-LASA1G$gmalbumi
-bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 | 
-            bio_LASA1_6$bio_alb_6 == -2,]$bio_alb_6 <- NA
+
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: bio_alt_0    
@@ -579,17 +538,12 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**: complete   
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. There are 2 variables of vitmain D available, the Odin standadised values were used for harmonization.  
-
+**Harmonization status**: impossible     
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. 
 
 **R script**:  
 ```{r, echo=TRUE}
-# conversion: 0.400641
-bio_LASA1_1$bio_vitd_1 <- LASA1C$cmvitd25st
-bio_LASA1_1[bio_LASA1_1$bio_vitd_1 == -1 | 
-            bio_LASA1_1$bio_vitd_1 == -2,]$bio_vitd_1 <- NA
-bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1*0.400641
+
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: bio_vitd_2    
@@ -637,14 +591,10 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1*0.400641
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**:  complete    
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. There are 2 variables of vitmain D available, the Odin standadised values were used for harmonization.    
-**R script**:  
+**Harmonization status**:  impossible      
+**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS.  
 ```{r, echo=TRUE}
-bio_LASA1_6$bio_vitd_6 <- LASA1G$gmvitd25st
-bio_LASA1_6[bio_LASA1_6$bio_vitd_6 == -1 | 
-            bio_LASA1_6$bio_vitd_6 == -2,]$bio_vitd_6 <-NA
-bio_LASA1_6$bio_vitd_6 <- bio_LASA1_6$bio_vitd_6*0.400641
+
 ```
 ### **Variable label**: Vitamin D 
 **Variable name**: bio_vitd_6    
@@ -665,13 +615,10 @@ bio_LASA1_6$bio_vitd_6 <- bio_LASA1_6$bio_vitd_6*0.400641
 **Variable unit**: mmol/L  
 **Category coding**: 
 
-**Harmonization status**:  complete  
-**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only). Values are from non-fasting participants.   
-**R script**:  
+**Harmonization status**:  impossible    
+**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only).  
 ```{r, echo=TRUE}
-bio_LASA1_0$bio_tg_0<-LASA1B$bmtrigly
-bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 | 
-            bio_LASA1_0$bio_tg_0 == -2,]$bio_tg_0 <- NA
+
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: bio_tg_1    
@@ -685,19 +632,7 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 
 **R script**:  
 ```{r, echo=TRUE}
-#**Question for cohort**: There are 2 variables in the dataset.  cmtrigly (Blood: triglycerids mMOL/L), cmtrigl2 (Blood: triglycerids mmol/L). cmtrigl2 is specifically under Cholesterol, triglycerides and fructosamin, cmtrigly is under routine measures. For bmtrigly, for collection point B, the documentation mentions -2's are from the Oss region, maybe these routine measure were not taken from that region at time point C as well?
-
-# # propostion 1
-# bio_LASA1_1$bio_tg_1 <- LASA1C$cmtrigl2
-# bio_LASA1_1[bio_LASA1_1$bio_tg_1 == -1 | 
-#             bio_LASA1_1$bio_tg_1 == -2,]$bio_tg_1 <- NA
-# # propostion 2
-# bio_LASA1_1$bio_tg_1 <- ifelse(
-#                          is.na(LASA1C$cmtrigl2),
-#                                LASA1C$cmtrigly,
-#                                LASA1C$cmtrigl2)
-# bio_LASA1_1[bio_LASA1_1$bio_tg_1 == -1 | 
-#             bio_LASA1_1$bio_tg_1 == -2,]$bio_tg_1 <- NA
+bio_HUNT_1$bio_tg_1 <- HUNT2$SeTrig_NT2BLM
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: bio_tg_2    
@@ -706,12 +641,12 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 **Variable unit**: mmol/L  
 **Category coding**: 
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  complete    
 
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-
+bio_HUNT_2$bio_tg_2 <- HUNT2$SeTrig_NT3BLM
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: bio_tg_3    
