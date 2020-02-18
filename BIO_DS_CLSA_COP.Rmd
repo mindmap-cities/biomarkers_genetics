@@ -685,11 +685,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive 
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -705,11 +704,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible?  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -725,11 +723,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -745,11 +742,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -765,11 +761,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -785,11 +780,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: RS7412 
@@ -805,11 +799,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -825,11 +818,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: complete   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -845,11 +837,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -865,11 +856,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -885,11 +875,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -905,11 +894,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -925,11 +913,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs429358 
@@ -945,11 +932,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -965,11 +951,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -985,11 +970,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1005,11 +989,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1025,11 +1008,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1045,11 +1027,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1065,11 +1046,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs440446 
@@ -1085,11 +1065,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1105,11 +1084,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1125,11 +1103,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1145,11 +1122,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive 
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1165,11 +1141,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1185,11 +1160,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs6265
@@ -1205,11 +1179,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive  
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 
@@ -1226,11 +1199,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  complete  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1246,11 +1218,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1266,11 +1237,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive  
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1286,11 +1256,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**: impossible   
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1306,11 +1275,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1326,11 +1294,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1346,11 +1313,10 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
 ### **Variable label**: Rs11156739
@@ -1366,10 +1332,9 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization status**:  
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#This is where the R-script will be written
 
 ```
