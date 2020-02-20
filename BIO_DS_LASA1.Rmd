@@ -284,7 +284,8 @@ bio_LASA1_0[bio_LASA1_0$bio_t4_0 == -1 |
 
 **R script**:  
 ```{r, echo=TRUE}
-#AG:**Question for cohort**: Same question as TSH. Is combining cmfreet4 and cmft4 okay?
+#**Question for cohort**:There are two variables: cmft4: free T4 (pmol/l) and cmfreet4: Blood: free T4 pMOL/L. There are a lot more missing values in cmft4, and the documentation refers to cmfreet4 for TSH. Also, cmft4 is not in the LASA_Laboratory measures MINDMAP_WP7_edit_V2.xlsx that was sent. In LASA study documentation, cmft4 is under Routine measurements: Albumin and cholesterol category. Is it okay to combine both variables?
+
 
 bio_LASA1_1$bio_t4_1 <- ifelse(
                          is.na(LASA1C$cmfreet4),
