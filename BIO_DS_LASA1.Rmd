@@ -284,6 +284,8 @@ bio_LASA1_0[bio_LASA1_0$bio_t4_0 == -1 |
 
 **R script**:  
 ```{r, echo=TRUE}
+#AG:**Question for cohort**: Same question as TSH. Is combining cmfreet4 and cmft4 okay?
+
 bio_LASA1_1$bio_t4_1 <- ifelse(
                          is.na(LASA1C$cmfreet4),
                                LASA1C$cmft4,
@@ -382,7 +384,7 @@ bio_LASA1_0[bio_LASA1_0$bio_alb_0 == -1 |
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS. Study-specific variable is taken from fresh blood and participants were fasting with tea and toast.       
 **R script**:  
 ```{r, echo=TRUE}
-#**Questions to cohort**: variablecmalbcon = Blood: albumin converted to BCG method (Adam, Oss) used for harmonization?
+#**Questions to cohort**: variable cmalbcon = Blood: albumin converted to BCG method (Adam, Oss) used for harmonization?
 bio_LASA1_1$bio_alb_1<-LASA1C$cmalbumi
 bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 | 
             bio_LASA1_1$bio_alb_1 == -2,]$bio_alb_1 <- NA

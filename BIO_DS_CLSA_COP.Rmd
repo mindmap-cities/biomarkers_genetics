@@ -27,7 +27,7 @@ bio_CLSA_COP_0 <- data.frame(id = CLSA_cop0$id)
 ```
 ## When you are done with your work, logout of Opal server
 ```{r, echo=FALSE}
-#opal.logout(erasmus_opal) 
+opal.logout(erasmus_opal) 
 ```
 # Table of Contents
 1. [Non-genetic Biomarker subdomain](#Non-genetic-biomarker-subdomain)
