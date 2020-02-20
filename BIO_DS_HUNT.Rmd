@@ -31,7 +31,7 @@ HUNT2_G <- opal.execute(erasmus_opal,'HUNT2GWAS')
 
 
 # HUNT3
-opal.assign.table.tibble(erasmus_opal, 'HUNT3', 'HUNT.HUNT3',variables = list('SemicroCRP_NT3BLM','SeTSH','SeT4_NT3BLM','SeTrig','SeTSH_NT3BLM'))
+opal.assign.table.tibble(erasmus_opal, 'HUNT3', 'HUNT.HUNT3',variables = list('SemicroCRP_NT3BLM','SeTSH','SeT4_NT3BLM','SeTrig','SeTSH_NT3BLM', 'SeALAT_NT3BLM', 'SeTrig_NT3BLM'))
 HUNT3 <- opal.execute(erasmus_opal,'HUNT3')
 
 opal.assign.table.tibble(erasmus_opal, 'HUNT3GWAS', 'HUNT.HUNT3GWAS' )
@@ -51,7 +51,7 @@ bio_HUNT_2 <- data.frame(id = HUNT3$id)
 ```
 ## When you are done with your work, logout of Opal server
 ```{r, echo=FALSE}
-#opal.logout(erasmus_opal) 
+opal.logout(erasmus_opal) 
 ```
 # Table of Contents
 1. [Non-genetic Biomarker subdomain](#Non-genetic-biomarker-subdomain)
@@ -461,11 +461,11 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Variable unit**: U/L  
 **Category coding**:
 
-**Harmonization status**:  impossible  
+**Harmonization status**:  complete    
 **Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-
+bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: bio_alt_3    
@@ -646,7 +646,7 @@ bio_HUNT_1$bio_tg_1 <- HUNT2$SeTrig_NT2BLM
 **Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
 **R script**:  
 ```{r, echo=TRUE}
-bio_HUNT_2$bio_tg_2 <- HUNT2$SeTrig_NT3BLM
+bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 ```
 ### **Variable label**: Triglycerides 
 **Variable name**: bio_tg_3    
