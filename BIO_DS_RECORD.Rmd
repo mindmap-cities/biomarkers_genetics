@@ -9,36 +9,27 @@ output: html_document
 #Load Opal R library
 library(opalr)
 library(data.table)
-# install.packages("naniar")
-library(naniar)
-library(epiDisplay)
-library(tidyverse)
-select <- dplyr::select
 # Create an opal object with the login information
 erasmus_opal <-opal.login()
 #Login to Opal server and assign the content of the LASA table(s) to your RStudio environment
 
-# LASA1B
-opal.assign.table.tibble(erasmus_opal, 'LASA1B', 'LASA.LASA1B_biodata',variables = list('bmalbumi','bmtsh','bmcrp','bmtrigly','bmfreet4','bmhscrp'))
-LASA1B <- opal.execute(erasmus_opal,'LASA1B')
+# RECORD_bio_wave1
+opal.assign.table.tibble(erasmus_opal, 'RECORD_bio_wave1', 'RECORD.RECORD_bio_wave1',variables = NA)
+RECORD_bio_wave1 <- opal.execute(erasmus_opal,'RECORD_bio_wave1')
 
-# LASA1C
-opal.assign.table.tibble(erasmus_opal, 'LASA1C', 'LASA.LASA1C_biodata',variables = list('cmalbumi','cmtsh','cmcrp','cmtrigly','cmfreet4','cmhscrp', "cmvitd25", "cmvitd25st","cmtsh2", "cmtrigl2", "cmft4"))
-LASA1C <- opal.execute(erasmus_opal,'LASA1C')
-
-# LASA1G
-opal.assign.table.tibble(erasmus_opal, 'LASA1G', 'LASA.LASA1G_biodata',variables = list('gmalbumi',"gmvitd25", "gmvitd25st"))
-LASA1G <- opal.execute(erasmus_opal,'LASA1G')
-
+# RECORD_bio_wave2
+opal.assign.table.tibble(erasmus_opal, 'RECORD_bio_wave2', 'RECORD.RECORD_bio_wave2',variables = NA)
+RECORD_bio_wave2 <- opal.execute(erasmus_opal,'RECORD_bio_wave2')
 ```
 ## Assign participant id as first column of your harmonized dataframes
 ```{r, echo=FALSE}
-bio_LASA1_0 <- data.frame(id = LASA1B$id)
-bio_LASA1_1 <- data.frame(id = LASA1C$id)
-bio_LASA1_6 <- data.frame(id = LASA1G$id)
+bio_RECORD_0 <- data.frame(id = RECORD_bio_wave1$id)
+bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 ```
-
-
+## When you are done with your work, logout of Opal server
+```{r, echo=FALSE}
+#opal.logout(erasmus_opal) 
+```
 # Table of Contents
 1. [Non-genetic Biomarker subdomain](#Non-genetic-biomarker-subdomain)
 2. [Genetic Biomarker subdomain](#Genetic-biomarker-subdomain)
@@ -46,109 +37,31 @@ bio_LASA1_6 <- data.frame(id = LASA1G$id)
 # Non-genetic Biomarkers subdomain
 
 ### **Variable label**: C-Reactive Protbein  
-### **Variable label Correction**: C-Reactive Protein  
 **Variable name**: bio_crp_0    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
 **Category coding**:     
 
-**Harmonization status**:  complete
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only)  
-**Harmonization comment**:There are 2 variables for CRP in LASA1: bmcrp and bmhscrp. See the LASA documentation for using the bmhscrp: 
-"Please note that CRP levels have also been determined directly after blood sampling (both in 1992/93 and in 1995/96), but this has been done for respondents in the Zwolle region only (N=384; see “Docu bloedbepaling B en C). However, for complete use of all available CRP data, it is strongly recommended to use data from file B+C861 (inflammatory markers), because this file includes the measurements of respondents in all regions. Also, the CRP determination in Zwolle was performed with a less sensitive assay than the CRP determination in the blood samples from all regions."
-**R correction script**:  
+**Harmonization status**:  impossible  
+**Harmonization comment**:    
+**R script**:  
 ```{r, echo=TRUE}
 
-## COMMENT: ask for selection rule between bmcrp & bmhscrp 
-## PROPOSITION : based on correlation decision, choose :
-##  proposition 1:      - only bmhscrp
-##  proposition 2:      - select bmhscrp, 
-##                            unless bmhscrp == NA, then select bmcrp
-##  proposition 3:      - select mean(bmhscrp , bmcrp) 
-##                            when bmhscrp == NA, then select bmcrp
-##                            when   bmcrp == NA, then select bmhscrp 
-
-# propostion 1
-bio_LASA1_0$bio_crp_0 <- LASA1B$bmhscrp
-bio_LASA1_0[bio_LASA1_0$bio_crp_0 == -1 | 
-            bio_LASA1_0$bio_crp_0 == -2,]$bio_crp_0 <- NA
-# propostion 2
-bio_LASA1_0$bio_crp_0 <- ifelse(
-                          is.na(LASA1B$bmhscrp), 
-                                LASA1B$bmcrp, 
-                                LASA1B$bmhscrp)
-bio_LASA1_0[bio_LASA1_0$bio_crp_0 == -1 | 
-            bio_LASA1_0$bio_crp_0 == -2,]$bio_crp_0 <- NA
-# propostion 3
-crp1 <- LASA1B$bmcrp
-   crp1[LASA1B$bmcrp == -1 | 
-        LASA1B$bmcrp == -2]<-NA
-crp2 <- LASA1B$bmhscrp
-   crp2[LASA1B$bmhscrp == -1 | 
-        LASA1B$bmhscrp == -2]<-NA
-
-bio_LASA1_0$bio_crp_0 <- rowMeans(x = cbind(crp1,crp2),na.rm = TRUE)
-bio_LASA1_0[is.nan(bio_LASA1_0$bio_crp_0),]$bio_crp_0 <- NA
-
-rm(crp1,crp2)
-
-  
-  
-  
 ```
-
-
-
 ### **Variable label**: C-Reactive Protein  
-**Variable name**: bio_crp_1  
+**Variable name**: bio_crp_1    
 **Variable description**: C-Reactive Protein measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mg/L  
 **Category coding**:     
 
-**Harmonization status**:  complete
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
-**R correction script**:  
+**Harmonization status**:  impossible  
+**Harmonization comment**:  
+**R script**:  
 ```{r, echo=TRUE}
-## COMMENT: ask for selection rule between cmcrp & cmhscrp 
-## PROPOSITION : based on correlation decision, choose :
-##  proposition 1:      - only cmhscrp
-##  proposition 2:      - select cmhscrp, 
-##                            unless cmhscrp == NA, then select cmtsh
-##  proposition 3:      - select mean(cmhscrp , cmcrp) 
-##                            when cmhscrp == NA, then select cmcrp
-##                            when   cmcrp == NA, then select cmhscrp 
 
-# propostion 1
-bio_LASA1_1$bio_crp_1 <- LASA1C$cmhscrp
-bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 | 
-            bio_LASA1_1$bio_crp_1==-2,]$bio_crp_1 <-NA
-# propostion 2
-bio_LASA1_1$bio_crp_1 <- ifelse(
-                          is.na(LASA1C$cmhscrp), 
-                                LASA1C$cmcrp,
-                                LASA1C$cmhscrp)
-bio_LASA1_1[bio_LASA1_1$bio_crp_1 == -1 | 
-            bio_LASA1_1$bio_crp_1 == -2,]$bio_crp_1<-NA
-# propostion 3
-crp1 <- LASA1C$cmcrp
-   crp1[LASA1C$cmcrp == -1 | 
-        LASA1C$cmcrp == -2] <- NA
-crp2 <- LASA1C$cmhscrp
-   crp2[LASA1C$cmhscrp == -1 |
-        LASA1C$cmhscrp==-2] <- NA
-
-bio_LASA1_1$bio_crp_1 <- rowMeans(x = cbind(crp1,crp2),na.rm = TRUE)
-bio_LASA1_1[is.nan(bio_LASA1_1$bio_crp_1),]$bio_crp_1 <- NA
-
-rm(crp1,crp2)
-
-
-  
-  
 ```
-
 
 ### **Variable label**: C-Reactive Protein  
 **Variable name**: bio_crp_2    
@@ -156,11 +69,11 @@ rm(crp1,crp2)
 **Value type**: Decimal 
 **Variable unit**: mg/L  
 **Category coding**:    
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -169,11 +82,11 @@ rm(crp1,crp2)
 **Value type**: Decimal 
 **Variable unit**: mg/L   
 **Category coding**:   
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -182,11 +95,11 @@ rm(crp1,crp2)
 **Value type**: Decimal 
 **Variable unit**: mg/L  
 **Category coding**:   
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -195,11 +108,11 @@ rm(crp1,crp2)
 **Value type**: Decimal 
 **Variable unit**: mg/L  
 **Category coding**:     
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: C-Reactive Protein  
@@ -208,11 +121,11 @@ rm(crp1,crp2)
 **Value type**: Decimal 
 **Variable unit**: mg/L  
 **Category coding**:   
-**Harmonization Correction status**:  impossible
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+
+**Harmonization status**:  impossibe
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -222,18 +135,12 @@ rm(crp1,crp2)
 **Variable unit**: mU/L  
 **Category coding**:
 
-**Harmonization status**: complete 
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
-**Harmonization comment**: LASA documentation states the information on thyroid hormone is collected only at time point C, but we have it at time B. In time point C, the measurement they refer to for thyroid function is cmtsh2, not cmtsh. bmths, cmths measures are referred under "Routine measurements: Albumin and cholesterol". What is the difference?
-**R correction script**:  
+**Harmonization status**: impossible       
+**Harmonization comment**:    
+**R script**:  
 ```{r, echo=TRUE}
 
-bio_LASA1_0$bio_tsh_0 <- LASA1B$bmtsh
-bio_LASA1_0[bio_LASA1_0$bio_tsh_0 == -1 | 
-            bio_LASA1_0$bio_tsh_0 == -2,]$bio_tsh_0 <- NA
 ```
-
-
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: bio_tsh_1    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
@@ -241,74 +148,24 @@ bio_LASA1_0[bio_LASA1_0$bio_tsh_0 == -1 |
 **Variable unit**: mU/L  
 **Category coding**: 
 
-**Harmonization status**:  complete
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
-**Harmonization comment**: There are two variables: cmtsh: Blood: TSH mU/L abd cmtsh2: thyroid-stimulating hormone (mU/l). There are a lot more missing values in cmtsh, and the documentation refers to cmtsh2 for TSH hormone; however we probably should ask about the difference. cmtsh is under Routine measurements: Albumin and cholesterol category. Which one should we refer to?
-**R correction script**:  
+**Harmonization status**:  impossible  
+**Harmonization comment**:    
+
+**R script**:  
 ```{r, echo=TRUE}
 
-## COMMENT: ask for selection rule between cmtsh & cmtsh2 
-## PROPOSITION : based on correlation decision, choose :
-##  proposition 1:      - only cmtsh2
-##  proposition 2:      - select cmtsh2, 
-##                            unless cmtsh2 == NA, then select cmtsh
-##  proposition 3:      - select mean(cmtsh2 , cmtsh) 
-##                            when cmtsh2 == NA, then select cmtsh
-##                            when  cmtsh == NA, then select cmtsh2 
-
-# propostion 1
-bio_LASA1_1$bio_tsh_1 <- LASA1C$cmtsh2
-bio_LASA1_1[bio_LASA1_1$bio_tsh_1==-1 | 
-            bio_LASA1_1$bio_tsh_1==-2,]$bio_tsh_1 <- NA
-# propostion 2
-bio_LASA1_1$bio_tsh_1 <- ifelse(
-                          is.na(LASA1C$cmtsh2),
-                                LASA1C$cmtsh,
-                                LASA1C$cmtsh2)
-bio_LASA1_1[bio_LASA1_1$bio_tsh_1 == -1 | 
-            bio_LASA1_1$bio_tsh_1 == -2,]$bio_tsh_1 <- NA
-# propostion 3
-tsh1 <- LASA1C$cmtsh
-   tsh1[LASA1C$cmtsh == -1 |
-        LASA1C$cmtsh == -2] <- NA
-tsh2 <- LASA1C$cmtsh2
-   tsh2[LASA1C$cmtsh2 == -1|
-        LASA1C$cmtsh2 == -2] <- NA
-
-bio_LASA1_1$bio_tsh_1 <- rowMeans(x = cbind(tsh1,tsh2),na.rm = TRUE)
-bio_LASA1_1[is.nan(bio_LASA1_1$bio_tsh_1),]$bio_tsh_1 <- NA
-
-rm(tsh1,tsh2)
-
-#To check whether individuals have similar TSH results looking at both variables (except for the missing cases)
-tsh1<-LASA1C$cmtsh
-tsh1[LASA1C$cmtsh==-2|LASA1C$cmtsh==-1]<-NA
-tsh2<-LASA1C$cmtsh2
-tsh2[LASA1C$cmtsh2==-2|LASA1C$cmtsh2==-1]<-NA
-#For each individual the results of cmtsh, cmtsh2 are closely correlated, thus it could possibly be a re-measuring of the same hormone for some individuals
-lm(tsh1~tsh2)
-table(tsh1, tsh2)
-
-bio_LASA1_1$bio_tsh_1<-LASA1C$cmtsh2
-table(bio_LASA1_1$bio_tsh_1, useNA = "always")
-summary(bio_LASA1_1$bio_tsh_1)
-  
-  
-
 ```
-
-
 ### **Variable label**: Thyroid Stimulating Hormone  
 **Variable name**: bio_tsh_2    
 **Variable description**:Thyroid Stimulating Hormone Measured in serum (fresh and frozen).    
 **Value type**: Decimal 
 **Variable unit**: mU/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -317,11 +174,11 @@ summary(bio_LASA1_1$bio_tsh_1)
 **Value type**: Decimal 
 **Variable unit**: mU/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -330,11 +187,11 @@ summary(bio_LASA1_1$bio_tsh_1)
 **Value type**: Decimal 
 **Variable unit**: mU/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -343,11 +200,11 @@ summary(bio_LASA1_1$bio_tsh_1)
 **Value type**: Decimal 
 **Variable unit**: mU/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroid Stimulating Hormone  
@@ -356,11 +213,11 @@ summary(bio_LASA1_1$bio_tsh_1)
 **Value type**: Decimal 
 **Variable unit**: mU/L  
 **Category coding**:
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroxine  
@@ -369,93 +226,38 @@ summary(bio_LASA1_1$bio_tsh_1)
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
 **Category coding**:
-**Harmonization status**:  complete  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
-**R correction script**:  
+
+**Harmonization status**:  impossible        
+**Harmonization comment**:    
+**R script**:  
 ```{r, echo=TRUE}
 
-bio_LASA1_0$bio_t4_0 <- LASA1B$bmfreet4
-bio_LASA1_0[bio_LASA1_0$bio_t4_0 == -1 | 
-            bio_LASA1_0$bio_t4_0 == -2,]$bio_t4_0 <- NA
-
 ```
-
-
 ### **Variable label**: Thyroxine  
 **Variable name**: bio_t4_1    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
 **Category coding**:
-**Harmonization status**:  complete  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
-**Harmonization comment**: There are 2 different variables for T4: cmft4 (free T4 (pmol/l)) and cmfreet4 (Blood: free T4 pMOL/L)
-**R correction script**:  
+
+**Harmonization status**:  impossible    
+**Harmonization comment**:    
+
+**R script**:  
 ```{r, echo=TRUE}
 
-## COMMENT: ask for selection rule between cmfreet4 & cmft4 
-## PROPOSITION : based on correlation decision, choose :
-##  proposition 1:      - only cmfreet4
-##  proposition 2:      - select cmfreet4, 
-##                            unless cmfreet4 == NA, then select cmft4
-##  proposition 3:      - select mean(cmfreet4 , cmft4) 
-##                            when cmfreet4 == NA, then select cmft4
-##                            when    cmft4 == NA, then select cmfreet4 
-
-# propostion 1
-bio_LASA1_1$bio_t4_1 <- LASA1C$cmfreet4
-bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 | 
-            bio_LASA1_1$bio_t4_1 == -2,]$bio_t4_1 <- NA
-# propostion 2
-bio_LASA1_1$bio_t4_1 <- ifelse(
-                         is.na(LASA1C$cmfreet4),
-                               LASA1C$cmft4,
-                               LASA1C$cmfreet4)
-bio_LASA1_1[bio_LASA1_1$bio_t4_1 == -1 | 
-            bio_LASA1_1$bio_t4_1==-2,]$bio_t4_1 <- NA
-# propostion 3
-t4_1 <- LASA1C$cmft4
-   t4_1[LASA1C$cmft4 == -1 |
-       LASA1C$cmft4 == -2] <- NA
-t4_2 <- LASA1C$cmfreet4
-   t4_2[LASA1C$cmfreet4 == -1 |
-       LASA1C$cmfreet4 == -2] <- NA
-
-bio_LASA1_1$bio_t4_1 <- rowMeans(x = cbind(t4_1,t4_2),na.rm = TRUE)
-bio_LASA1_1[is.nan(bio_LASA1_1$bio_t4_1),]$bio_t4_1 <- NA
-
-rm(t4_1,t4_2)
-
-table(LASA1C$cmft4 , useNA = "always")
-table(LASA1C$cmfreet4 , useNA = "always")
-
-#T4 but less answers b  
-t4_1<-LASA1C$cmft4
-t4_1[LASA1C$cmft4==-2|LASA1C$cmft4==-1]<-NA
-t4_2<-LASA1C$cmfreet4
-t4_2[LASA1C$cmfreet4==-2|LASA1C$cmfreet4==-1]<-NA
-#For each individual the results of the two T-4 variables correlate quite closely
-lm(t4_1~t4_2)
-
-bio_LASA1_1$bio_t4_1<-LASA1C$cmfreet4
-table(bio_LASA1_1$bio_t4_1, useNA = "always")
-summary(bio_LASA1_1$bio_t4_1)
-
-
-
 ```
-
 ### **Variable label**: Thyroxine  
 **Variable name**: bio_t4_2    
 **Variable description**:Thyroxine Measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroxine  
@@ -464,11 +266,11 @@ summary(bio_LASA1_1$bio_t4_1)
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroxine  
@@ -477,11 +279,11 @@ summary(bio_LASA1_1$bio_t4_1)
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroxine  
@@ -490,11 +292,11 @@ summary(bio_LASA1_1$bio_t4_1)
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Thyroxine  
@@ -503,11 +305,11 @@ summary(bio_LASA1_1$bio_t4_1)
 **Value type**: Decimal 
 **Variable unit**: pMol/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Albumin  
@@ -518,18 +320,11 @@ summary(bio_LASA1_1$bio_t4_1)
 **Category coding**: 
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
-**R correction script**:  
+**Harmonization comment**:    
+**R script**:  
 ```{r, echo=TRUE}
-
-bio_LASA1_0$bio_alb_0<-LASA1B$bmalbumi
-bio_LASA1_0[bio_LASA1_0$bio_alb_0 == -1 | 
-            bio_LASA1_0$bio_alb_0 == -2,]$bio_alb_0 <- NA
-
-
+bio_RECORD_0$bio_alb_0 <- as.numeric(RECORD_bio_wave1$Bio3)
 ```
-
-
 ### **Variable label**: Albumin  
 **Variable name**: bio_alb_1    
 **Variable description**:Albumin measured in serum (fresh and frozen).  
@@ -538,16 +333,11 @@ bio_LASA1_0[bio_LASA1_0$bio_alb_0 == -1 |
 **Category coding**: 
 
 **Harmonization status**:  complete 
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
-**R correction script**:  
+**Harmonization comment**:  
+**R script**:  
 ```{r, echo=TRUE}
-
-bio_LASA1_1$bio_alb_1<-LASA1C$cmalbumi
-bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 | 
-            bio_LASA1_1$bio_alb_1 == -2,]$bio_alb_1 <- NA
-
+bio_RECORD_1$bio_alb_1 <- as.numeric(RECORD_bio_wave2$Bio3)
 ```
-
 ### **Variable label**: Albumin  
 **Variable name**: bio_alb_2    
 **Variable description**: Albumin measured in serum (fresh and frozen).  
@@ -556,10 +346,9 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Albumin  
@@ -570,10 +359,9 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Albumin  
@@ -581,14 +369,13 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 **Variable description**: Albumin measured in serum (fresh and frozen).  
 **Value type**: Decimal 
 **Variable unit**: G/L  
-**Category coding**: N/A (continuous variable)  
+**Category coding**: N/A  
 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Albumin  
@@ -599,7 +386,7 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -611,17 +398,12 @@ bio_LASA1_1[bio_LASA1_1$bio_alb_1 == -1 |
 **Variable unit**: G/L  
 **Category coding**: 
 
-**Harmonization status**:  complete
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
-**R correction script**:  
+**Harmonization status**:  complete    
+**Harmonization comment**:    
+**R script**:  
 ```{r, echo=TRUE}
 
-bio_LASA1_6$bio_alb_6<-LASA1G$gmalbumi
-bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 | 
-            bio_LASA1_6$bio_alb_6 == -2,]$bio_alb_6 <- NA
-
 ```
-
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: bio_alt_0    
 **Variable description**: Alanine Aminotransferase measured in serum (fresh and frozen).    
@@ -629,11 +411,11 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Variable unit**: U/L  
 **Category coding**: 
 
-**Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization status**:  complete    
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
+bio_RECORD_0$bio_alt_0 <- as.numeric(RECORD_bio_wave1$Trb16)
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: bio_alt_1    
@@ -642,11 +424,11 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Variable unit**: U/L  
 **Category coding**: 
 
-**Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization status**:  complete    
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
-
+bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 ```
 ### **Variable label**: Alanine Aminotransferase  
 **Variable name**: bio_alt_2    
@@ -656,7 +438,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -669,7 +451,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -682,7 +464,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -695,7 +477,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -708,7 +490,7 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -720,10 +502,9 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Variable unit**: ng/ml  
 **Category coding**: 
 **Harmonization status**:  impossible
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Vitamin D 
@@ -733,53 +514,12 @@ bio_LASA1_6[bio_LASA1_6$bio_alb_6 == -1 |
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**: complete   
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
-**Harmonization comment**:There are 2 variables: cmvitd25st (serum: 25-hydroxyvitamin D (25(OH)D), nmol/L, ODIN-standardized) and 
-cmvitd25 (serum: 25-hydroxyvitamin D (25(OH)D), nmol/L). "In 2015, serum 25(OHD) values were standardized using the Vitamin D Standardization Program (VDSP) protocol as part of the European ODIN study" From NIH website (https://ods.od.nih.gov/Research/vdsp.aspx): "art of the ODS Vitamin D Initiative, VDSP is an international collaborative effort to standardize the laboratory measurement of vitamin D status." So should we use the standardized measure to make it more comparable across time and studies. However, if other cohorts didn't use this measure maybe there is not much point?
-The unit of measurement is nmol/L in the study and ng/ml in the DS. So the units are converted to harmonize. 
-
-**R correction script**:  
+**Harmonization status**: impossible     
+**Harmonization comment**:  
+**R script**:  
 ```{r, echo=TRUE}
 
-## COMMENT: ask for selection rule between cmvitd25st & cmvitd25 
-## PROPOSITION : based on correlation decision, choose :
-##  proposition 1:      - only cmvitd25st
-##  proposition 2:      - select cmvitd25st, 
-##                            unless cmvitd25st == NA, then select cmvitd25
-##  proposition 3:      - select mean(cmvitd25st , cmvitd25) 
-##                            when cmvitd25st == NA, then select cmvitd25
-##                            when   cmvitd25 == NA, then select cmvitd25st 
-
-# propostion 1
-bio_LASA1_1$bio_vitd_1 <- LASA1C$cmvitd25st
-bio_LASA1_1[bio_LASA1_1$bio_vitd_1 == -1 | 
-            bio_LASA1_1$bio_vitd_1 == -2,]$bio_vitd_1 <- NA
-# propostion 2
-bio_LASA1_1$bio_vitd_1 <- ifelse(
-                           is.na(LASA1C$cmvitd25st),
-                                 LASA1C$cmvitd25,
-                                 LASA1C$cmvitd25st)
-bio_LASA1_1[bio_LASA1_1$bio_vitd_1 == -1 |
-            bio_LASA1_1$bio_vitd_1 == -2,]$bio_vitd_1 <- NA
-# propostion 3
-vit1 <- LASA1C$cmvitd25
-   vit1[LASA1C$cmvitd25 == -1 | 
-        LASA1C$cmvitd25 == -2] <- NA
-vit2 <- LASA1C$cmvitd25st
-   vit2[LASA1C$cmvitd25st == -1 |
-        LASA1C$cmvitd25st == -2] <- NA
-
-bio_LASA1_1$bio_vitd_1 <- rowMeans(x = cbind(vit1,vit2),na.rm = TRUE)
-bio_LASA1_1[is.nan(bio_LASA1_1$bio_vitd_1),]$bio_vitd_1 <- NA
-
-rm(vit1,vit2)
-
-bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1 * 0.400641
-
-
 ```
-
 ### **Variable label**: Vitamin D 
 **Variable name**: bio_vitd_2    
 **Variable description**: Vitamin D measured in serum (fresh and frozen).    
@@ -788,7 +528,7 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1 * 0.400641
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -801,7 +541,7 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1 * 0.400641
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -814,7 +554,7 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1 * 0.400641
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -826,8 +566,8 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1 * 0.400641
 **Variable unit**: ng/ml  
 **Category coding**: 
 
-**Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization status**:  impossible      
+**Harmonization comment**:      
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -838,49 +578,12 @@ bio_LASA1_1$bio_vitd_1 <- bio_LASA1_1$bio_vitd_1 * 0.400641
 **Value type**: Decimal 
 **Variable unit**: ng/ml  
 **Category coding**: 
-**Harmonization status**:  complete  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
-**R correction script**:  
+**Harmonization status**:  impossible    
+**Harmonization comment**:    
+**R script**:  
 ```{r, echo=TRUE}
 
-## COMMENT: ask for selection rule between gmvitd25st & gmvitd25 
-## PROPOSITION : based on correlation decision, choose :
-##  proposition 1:      - only gmvitd25st
-##  proposition 2:      - select gmvitd25st, 
-##                            unless gmvitd25st == NA, then select gmvitd25
-##  proposition 3:      - select mean(gmvitd25st , gmvitd25) 
-##                            when gmvitd25st == NA, then select gmvitd25
-##                            when   gmvitd25 == NA, then select gmvitd25st 
-
-# propostion 1
-bio_LASA1_6$bio_vitd_6 <- LASA1G$gmvitd25st
-bio_LASA1_6[bio_LASA1_6$bio_vitd_6 == -1 | 
-            bio_LASA1_6$bio_vitd_6 == -2,]$bio_vitd_6 <-NA
-# propostion 2
-bio_LASA1_6$bio_vitd_6 <- ifelse(
-                           is.na(LASA1G$gmvitd25st),
-                                 LASA1G$gmvitd25,
-                                 LASA1G$gmvitd25st)
-bio_LASA1_6[bio_LASA1_6$bio_vitd_6 == -1 | 
-            bio_LASA1_6$bio_vitd_6 == -2,]$bio_vitd_6 <- NA
-# propostion 3
-vit1 <- LASA1G$gmvitd25
-   vit1[LASA1G$gmvitd25 == -1 |
-        LASA1G$gmvitd25 == -2] <- NA
-vit2 <- LASA1G$gmvitd25st
-   vit2[LASA1G$gmvitd25st == -1 | 
-        LASA1G$gmvitd25st == -2] <- NA
-
-bio_LASA1_6$bio_vitd_6 <- rowMeans(x = cbind(vit1,vit2),na.rm = TRUE)
-bio_LASA1_6[is.nan(bio_LASA1_6$bio_vitd_6),]$bio_vitd_6 <- NA
-
-rm(vit1,vit2)
-
-bio_LASA1_6$bio_vitd_6 <- bio_LASA1_6$bio_vitd_6 * 0.400641        
-
-
 ```
-
 ### **Variable label**: Triglycerides 
 **Variable name**: bio_tg_0    
 **Variable description**: Triglycerides measured in serum (fresh and frozen).    
@@ -889,16 +592,11 @@ bio_LASA1_6$bio_vitd_6 <- bio_LASA1_6$bio_vitd_6 * 0.400641
 **Category coding**: 
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only) 
+**Harmonization comment**:     
 **R script**:  
-**R correction script**:  
 ```{r, echo=TRUE}
-
-bio_LASA1_0$bio_tg_0<-LASA1B$bmtrigly
-bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 | 
-            bio_LASA1_0$bio_tg_0 == -2,]$bio_tg_0 <- NA
+bio_RECORD_0$bio_tg_0 <- as.numeric(RECORD_bio_wave1$Bio12)
 ```
-
 ### **Variable label**: Triglycerides 
 **Variable name**: bio_tg_1    
 **Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
@@ -906,49 +604,11 @@ bio_LASA1_0[bio_LASA1_0$bio_tg_0 == -1 |
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
-**Harmonization comment**: There are 2 variables in the dataset.  cmtrigly (Blood: triglycerids mMOL/L), cmtrigl2 (Blood: triglycerids mmol/L). cmtrigl2 is specifically under Cholesterol, triglycerides and fructosamin, cmtrigly is under routine measures. For bmtrigly, for collection point B, the documentation mentions -2's are from the Oss region, maybe these routine measure were not taken from that region at time point C as well?
-**R correction script**:  
+**Harmonization comment**: Study-specific variable is rounded.  
+**R script**:  
 ```{r, echo=TRUE}
-
-## COMMENT: ask for selection rule between cmtrigl2 & cmtrigly 
-## PROPOSITION : based on correlation decision, choose :
-##  proposition 1:      - only cmtrigl2
-##  proposition 2:      - select cmtrigl2, 
-##                            unless cmtrigl2 == NA, then select cmtrigly
-##  proposition 3:      - select mean(cmtrigl2 , cmtrigly) 
-##                            when  cmtrigl == NA, then select cmtrigl2
-##                            when cmtrigl2 == NA, then select cmtrigly 
-
-# propostion 1
-bio_LASA1_1$bio_tg_1 <- LASA1C$cmtrigl2
-bio_LASA1_1[bio_LASA1_1$bio_tg_1 == -1 | 
-            bio_LASA1_1$bio_tg_1 == -2,]$bio_tg_1 <- NA
-# propostion 2
-bio_LASA1_1$bio_tg_1 <- ifelse(
-                         is.na(LASA1C$cmtrigl2),
-                               LASA1C$cmtrigly,
-                               LASA1C$cmtrigl2)
-bio_LASA1_1[bio_LASA1_1$bio_tg_1 == -1 | 
-            bio_LASA1_1$bio_tg_1 == -2,]$bio_tg_1 <- NA
-# propostion 3
-tg1 <- LASA1C$cmtrigly
-   tg1[LASA1C$cmtrigly == -1 |
-       LASA1C$cmtrigly == -2] <- NA
-tg2 <- LASA1C$cmtrigl2
-   tg2[LASA1C$cmtrigl2 == -1 |
-       LASA1C$cmtrigl2 == -2] <- NA
-
-bio_LASA1_1$bio_tg_1 <- rowMeans(x = cbind(tg1,tg2),na.rm = TRUE)
-bio_LASA1_1[is.nan(bio_LASA1_1$bio_tg_1),]$bio_tg_1 <- NA
-
-rm(tg1,tg2)
-
-  
-  
-  
+bio_RECORD_1$bio_tg_1 <- as.numeric(RECORD_bio_wave2$Bio12)
 ```
-
 ### **Variable label**: Triglycerides 
 **Variable name**: bio_tg_2    
 **Variable description**: Triglycerides  Measured in serum (fresh and frozen).    
@@ -957,7 +617,7 @@ rm(tg1,tg2)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -970,7 +630,7 @@ rm(tg1,tg2)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -982,7 +642,7 @@ rm(tg1,tg2)
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -994,7 +654,7 @@ rm(tg1,tg2)
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1005,8 +665,9 @@ rm(tg1,tg2)
 **Value type**: Decimal 
 **Variable unit**: mmol/L  
 **Category coding**: 
+
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -1032,7 +693,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: RS7412 
 **Variable name**: bio_rs7412_1   
@@ -1051,7 +711,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: RS7412 
@@ -1072,7 +731,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: RS7412 
 **Variable name**: bio_rs7412_3   
@@ -1087,11 +745,10 @@ rm(tg1,tg2)
 1 | Homozygous Recessive   
 2 | Heterozygous Recessive
 
-**Harmonization correction status**: impossible
+**Harmonization status**:  impossible  
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: RS7412 
@@ -1112,7 +769,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: RS7412 
 **Variable name**: bio_rs7412_5   
@@ -1131,7 +787,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: RS7412 
@@ -1152,11 +807,10 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_0   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1171,12 +825,11 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_1   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1191,12 +844,11 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_2   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1211,12 +863,11 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_3   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1231,12 +882,11 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_4   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1252,11 +902,10 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_5   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1272,11 +921,10 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_6   
-**Variable description**: RS7412 Polymorphism of APOE Gene.    
+**Variable description**: RS429358 Polymorphism of APOE Gene.    
 **Value type**: alphanumeric  
 **Variable unit**: N/A  
 **Category coding**:  
@@ -1291,7 +939,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs440446 
@@ -1312,7 +959,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: bio_rs440446_1   
@@ -1331,7 +977,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs440446 
@@ -1352,7 +997,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: bio_rs440446_3   
@@ -1371,7 +1015,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs440446 
@@ -1392,7 +1035,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: bio_rs440446_5   
@@ -1411,7 +1053,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs440446 
@@ -1432,7 +1073,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs6265
 **Variable name**: bio_rs6265_0   
@@ -1451,7 +1091,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs6265
@@ -1472,7 +1111,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs6265
 **Variable name**: bio_rs6265_2   
@@ -1491,7 +1129,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs6265
@@ -1512,7 +1149,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs6265
 **Variable name**: bio_rs6265_4   
@@ -1531,7 +1167,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs6265
@@ -1552,8 +1187,8 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
+
 ### **Variable label**: Rs6265
 **Variable name**: bio_rs6265_6   
 **Variable description**: Rs6265 Polymorphism of BDNF Gene.    
@@ -1571,7 +1206,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs11156739
@@ -1592,7 +1226,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: bio_rs11156739_1   
@@ -1611,7 +1244,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs11156739
@@ -1632,7 +1264,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: bio_rs11156739_3   
@@ -1651,7 +1282,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs11156739
@@ -1672,7 +1302,6 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: bio_rs11156739_5   
@@ -1691,7 +1320,6 @@ rm(tg1,tg2)
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-
 
 ```
 ### **Variable label**: Rs11156739
@@ -1712,14 +1340,4 @@ rm(tg1,tg2)
 **R script**:  
 ```{r, echo=TRUE}
 
-
 ```
-
-**R correction logout**:
-## When you are done with your work, logout of Opal server
-```{r, echo=FALSE}
-opal.logout(erasmus_opal) 
-rm(erasmus_opal, select)
-
-```
-

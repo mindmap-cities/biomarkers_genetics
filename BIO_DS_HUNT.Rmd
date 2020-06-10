@@ -51,7 +51,7 @@ bio_HUNT_2 <- data.frame(id = HUNT3$id)
 ```
 ## When you are done with your work, logout of Opal server
 ```{r, echo=FALSE}
-opal.logout(erasmus_opal) 
+#opal.logout(erasmus_opal) 
 ```
 # Table of Contents
 1. [Non-genetic Biomarker subdomain](#Non-genetic-biomarker-subdomain)
@@ -67,7 +67,7 @@ opal.logout(erasmus_opal)
 **Category coding**:     
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only).   
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -80,7 +80,7 @@ opal.logout(erasmus_opal)
 **Category coding**:     
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS.  
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -94,7 +94,7 @@ opal.logout(erasmus_opal)
 **Category coding**:    
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -107,7 +107,7 @@ opal.logout(erasmus_opal)
 **Category coding**:   
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -120,7 +120,7 @@ opal.logout(erasmus_opal)
 **Category coding**:   
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -133,7 +133,7 @@ opal.logout(erasmus_opal)
 **Category coding**:     
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -146,7 +146,7 @@ opal.logout(erasmus_opal)
 **Category coding**:   
 
 **Harmonization status**:  impossibe
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -159,7 +159,7 @@ opal.logout(erasmus_opal)
 **Category coding**:
 
 **Harmonization status**: impossible       
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
+**Harmonization comment**:    
 
 **R script**:  
 ```{r, echo=TRUE}
@@ -173,7 +173,7 @@ opal.logout(erasmus_opal)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
+**Harmonization comment**:    
 
 
 **R script**:  
@@ -188,7 +188,7 @@ opal.logout(erasmus_opal)
 **Category coding**: 
 
 **Harmonization status**:  complete    
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
@@ -201,7 +201,7 @@ bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -214,7 +214,7 @@ bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -227,7 +227,7 @@ bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -240,7 +240,7 @@ bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -253,7 +253,7 @@ bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
 **Category coding**:
 
 **Harmonization status**:  impossible        
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
+**Harmonization comment**:    
 ```{r, echo=TRUE}
 
 ```
@@ -265,7 +265,7 @@ bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
 **Category coding**:
 
 **Harmonization status**:  impossible    
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.    
+**Harmonization comment**:      
 
 **R script**:  
 ```{r, echo=TRUE}
@@ -279,7 +279,7 @@ bio_HUNT_2$bio_tsh_2 <- HUNT3$SeTSH_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  complete    
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
@@ -292,7 +292,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -305,7 +305,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -318,7 +318,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -331,7 +331,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -344,7 +344,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible    
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS.    
+**Harmonization comment**:      
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -357,7 +357,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible   
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS.  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -370,7 +370,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -383,7 +383,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -397,7 +397,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -410,7 +410,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -423,7 +423,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible      
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS.  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -436,7 +436,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -449,7 +449,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -462,7 +462,7 @@ bio_HUNT_2$bio_t4_2 <- HUNT3$SeT4_NT3BLM
 **Category coding**:
 
 **Harmonization status**:  complete    
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
@@ -475,7 +475,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -488,7 +488,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -501,7 +501,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -514,7 +514,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -526,7 +526,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Variable unit**: ng/ml  
 **Category coding**: 
 **Harmonization status**:  impossible
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -539,7 +539,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**: 
 
 **Harmonization status**: impossible     
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. 
+**Harmonization comment**:  
 
 **R script**:  
 ```{r, echo=TRUE}
@@ -553,7 +553,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -566,7 +566,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -579,7 +579,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -592,7 +592,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible      
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS.  
+**Harmonization comment**:  
 ```{r, echo=TRUE}
 
 ```
@@ -603,7 +603,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Variable unit**: ng/ml  
 **Category coding**: 
 **Harmonization status**:  impossible    
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -616,7 +616,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible    
-**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only).  
+**Harmonization comment**:   
 ```{r, echo=TRUE}
 
 ```
@@ -627,7 +627,7 @@ bio_HUNT_2$bio_alt_2 <- HUNT3$SeALAT_NT3BLM
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 
 
 **R script**:  
@@ -643,7 +643,7 @@ bio_HUNT_1$bio_tg_1 <- HUNT2$SeTrig_NT2BLM
 
 **Harmonization status**:  complete    
 
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
@@ -656,7 +656,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -668,7 +668,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -680,7 +680,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -693,7 +693,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -719,8 +719,6 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **R script**:  
 ```{r, echo=TRUE}
 
-#table(HUNT1$rs7412_HUNTGWAS, useNA="always")
-
 ```
 ### **Variable label**: RS7412 
 **Variable name**: bio_rs7412_1   
@@ -739,7 +737,6 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#table(HUNT2$rs7412_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: RS7412 
@@ -759,7 +756,6 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#table(HUNT3$rs7412_HUNTGWAS, useNA="always")
 
 ```
 ### **Variable label**: RS7412 
@@ -855,7 +851,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#table(HUNT1$rs429358_HUNTGWAS, useNA="always")
+
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_1   
@@ -874,7 +870,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#table(HUNT2$rs429358_HUNTGWAS, useNA="always")
+
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_2   
@@ -893,7 +889,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#table(HUNT3$rs429358_HUNTGWAS, useNA="always")
+
 ```
 ### **Variable label**: Rs429358 
 **Variable name**: bio_rs429358_3   
@@ -988,8 +984,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-# table(HUNT1$rs440446, useNA="always")
-# summary(HUNT1$rs440446, useNA="always")
+
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: bio_rs440446_1   
@@ -1008,8 +1003,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-# table(HUNT2$rs440446, useNA="always")
-# summary(HUNT2$rs440446, useNA="always")
+
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: bio_rs440446_2   
@@ -1028,8 +1022,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-# table(HUNT3$rs440446, useNA="always")
-# summary(HUNT3$rs440446, useNA="always")
+
 ```
 ### **Variable label**: Rs440446 
 **Variable name**: bio_rs440446_3   
@@ -1124,7 +1117,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#table(HUNT1$rs6265_HUNTGWAS, useNA="always")
+
 ```
 ### **Variable label**: Rs6265
 **Variable name**: bio_rs6265_1   
@@ -1143,7 +1136,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#table(HUNT2$rs6265_HUNTGWAS, useNA="always")
+
 ```
 ### **Variable label**: Rs6265
 **Variable name**: bio_rs6265_2   
@@ -1162,7 +1155,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-#table(HUNT3$rs6265_HUNTGWAS, useNA="always")
+
 ```
 ### **Variable label**: Rs6265
 **Variable name**: bio_rs6265_3   
@@ -1258,8 +1251,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-# table(HUNT1$rs11156739, useNA="always")
-# summary(HUNT1$rs11156739)
+
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: bio_rs11156739_1   
@@ -1278,8 +1270,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-# table(HUNT2$rs11156739, useNA="always")
-# summary(HUNT2$rs11156739)
+
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: bio_rs11156739_2   
@@ -1298,8 +1289,7 @@ bio_HUNT_2$bio_tg_2 <- HUNT3$SeTrig_NT3BLM
 **Harmonization comment**: GWAS available in CLSA, HUNT, LASA, RS
 **R script**:  
 ```{r, echo=TRUE}
-# table(HUNT3$rs11156739, useNA="always")
-# summary(HUNT3$rs11156739)
+
 ```
 ### **Variable label**: Rs11156739
 **Variable name**: bio_rs11156739_3   
