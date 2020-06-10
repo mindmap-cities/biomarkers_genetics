@@ -27,7 +27,7 @@ bio_CLSA_COP_0 <- data.frame(id = CLSA_cop0$id)
 ```
 ## When you are done with your work, logout of Opal server
 ```{r, echo=FALSE}
-opal.logout(erasmus_opal) 
+#opal.logout(erasmus_opal) 
 ```
 # Table of Contents
 1. [Non-genetic Biomarker subdomain](#Non-genetic-biomarker-subdomain)
@@ -43,7 +43,7 @@ opal.logout(erasmus_opal)
 **Category coding**:     
 
 **Harmonization status**:  complete
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only). In this study, values "less than 0.1 - exact value undetermined" are coded as null.    
+**Harmonization comment**: In this study, values "less than 0.1 - exact value undetermined" are coded as null.    
 **R script**:  
 ```{r, echo=TRUE}
 bio_CLSA_COP_0$bio_crp_0 <- ifelse(CLSA_cop0$BLD_HSCRP_COM =='-2222' | CLSA_cop0$BLD_HSCRP_COM =='-8888',NA,CLSA_cop0$BLD_HSCRP_COM)
@@ -56,7 +56,7 @@ bio_CLSA_COP_0$bio_crp_0 <- ifelse(CLSA_cop0$BLD_HSCRP_COM =='-2222' | CLSA_cop0
 **Category coding**:     
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -70,7 +70,7 @@ bio_CLSA_COP_0$bio_crp_0 <- ifelse(CLSA_cop0$BLD_HSCRP_COM =='-2222' | CLSA_cop0
 **Category coding**:    
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -83,7 +83,7 @@ bio_CLSA_COP_0$bio_crp_0 <- ifelse(CLSA_cop0$BLD_HSCRP_COM =='-2222' | CLSA_cop0
 **Category coding**:   
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -96,7 +96,7 @@ bio_CLSA_COP_0$bio_crp_0 <- ifelse(CLSA_cop0$BLD_HSCRP_COM =='-2222' | CLSA_cop0
 **Category coding**:   
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -109,7 +109,7 @@ bio_CLSA_COP_0$bio_crp_0 <- ifelse(CLSA_cop0$BLD_HSCRP_COM =='-2222' | CLSA_cop0
 **Category coding**:     
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -122,7 +122,7 @@ bio_CLSA_COP_0$bio_crp_0 <- ifelse(CLSA_cop0$BLD_HSCRP_COM =='-2222' | CLSA_cop0
 **Category coding**:   
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -135,7 +135,7 @@ bio_CLSA_COP_0$bio_crp_0 <- ifelse(CLSA_cop0$BLD_HSCRP_COM =='-2222' | CLSA_cop0
 **Category coding**:
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  In this study, values "less than 0.1 - exact value undetermined" are coded as null.    
+**Harmonization comment**: In this study, values "less than 0.1 - exact value undetermined" are coded as null.    
 **R script**:  
 ```{r, echo=TRUE}
 bio_CLSA_COP_0$bio_tsh_0 <- ifelse(CLSA_cop0$BLD_TSH_COM =='-2222' | CLSA_cop0$BLD_TSH_COM =='-8888',NA,CLSA_cop0$BLD_TSH_COM)
@@ -148,7 +148,7 @@ bio_CLSA_COP_0$bio_tsh_0 <- ifelse(CLSA_cop0$BLD_TSH_COM =='-2222' | CLSA_cop0$B
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -161,7 +161,7 @@ bio_CLSA_COP_0$bio_tsh_0 <- ifelse(CLSA_cop0$BLD_TSH_COM =='-2222' | CLSA_cop0$B
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -174,7 +174,7 @@ bio_CLSA_COP_0$bio_tsh_0 <- ifelse(CLSA_cop0$BLD_TSH_COM =='-2222' | CLSA_cop0$B
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -187,7 +187,7 @@ bio_CLSA_COP_0$bio_tsh_0 <- ifelse(CLSA_cop0$BLD_TSH_COM =='-2222' | CLSA_cop0$B
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -200,7 +200,7 @@ bio_CLSA_COP_0$bio_tsh_0 <- ifelse(CLSA_cop0$BLD_TSH_COM =='-2222' | CLSA_cop0$B
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -213,7 +213,7 @@ bio_CLSA_COP_0$bio_tsh_0 <- ifelse(CLSA_cop0$BLD_TSH_COM =='-2222' | CLSA_cop0$B
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -226,7 +226,7 @@ bio_CLSA_COP_0$bio_tsh_0 <- ifelse(CLSA_cop0$BLD_TSH_COM =='-2222' | CLSA_cop0$B
 **Category coding**:
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS. In this study, values that are "greater than 100 - exact value undetermined" or "less than 0.3 - exact value undetermined" are coded as null.  
+**Harmonization comment**:  In this study, values that are "greater than 100 - exact value undetermined" or "less than 0.3 - exact value undetermined" are coded as null.  
 **R script**:  
 ```{r, echo=TRUE}
 bio_CLSA_COP_0$bio_t4_0 <- ifelse(CLSA_cop0$BLD_FT4_COM =='-2222' | CLSA_cop0$BLD_FT4_COM =='-1111',NA,CLSA_cop0$BLD_FT4_COM)
@@ -239,7 +239,7 @@ bio_CLSA_COP_0$bio_t4_0 <- ifelse(CLSA_cop0$BLD_FT4_COM =='-2222' | CLSA_cop0$BL
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -252,7 +252,7 @@ bio_CLSA_COP_0$bio_t4_0 <- ifelse(CLSA_cop0$BLD_FT4_COM =='-2222' | CLSA_cop0$BL
 **Category coding**: 
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -265,7 +265,7 @@ bio_CLSA_COP_0$bio_t4_0 <- ifelse(CLSA_cop0$BLD_FT4_COM =='-2222' | CLSA_cop0$BL
 **Category coding**: 
 
 **Harmonization status**: impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -278,7 +278,7 @@ bio_CLSA_COP_0$bio_t4_0 <- ifelse(CLSA_cop0$BLD_FT4_COM =='-2222' | CLSA_cop0$BL
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -291,7 +291,7 @@ bio_CLSA_COP_0$bio_t4_0 <- ifelse(CLSA_cop0$BLD_FT4_COM =='-2222' | CLSA_cop0$BL
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -304,7 +304,7 @@ bio_CLSA_COP_0$bio_t4_0 <- ifelse(CLSA_cop0$BLD_FT4_COM =='-2222' | CLSA_cop0$BL
 **Category coding**: 
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -317,7 +317,7 @@ bio_CLSA_COP_0$bio_t4_0 <- ifelse(CLSA_cop0$BLD_FT4_COM =='-2222' | CLSA_cop0$BL
 **Category coding**: 
 
 **Harmonization status**: complete   
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 bio_CLSA_COP_0$bio_alb_0 <- ifelse(CLSA_cop0$BLD_ALB_COM =='-8888',NA,CLSA_cop0$BLD_ALB_COM)
@@ -330,7 +330,7 @@ bio_CLSA_COP_0$bio_alb_0 <- ifelse(CLSA_cop0$BLD_ALB_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -343,7 +343,7 @@ bio_CLSA_COP_0$bio_alb_0 <- ifelse(CLSA_cop0$BLD_ALB_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -356,7 +356,7 @@ bio_CLSA_COP_0$bio_alb_0 <- ifelse(CLSA_cop0$BLD_ALB_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -370,7 +370,7 @@ bio_CLSA_COP_0$bio_alb_0 <- ifelse(CLSA_cop0$BLD_ALB_COM =='-8888',NA,CLSA_cop0$
 
 
 **Harmonization status**: impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -383,7 +383,7 @@ bio_CLSA_COP_0$bio_alb_0 <- ifelse(CLSA_cop0$BLD_ALB_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -396,7 +396,7 @@ bio_CLSA_COP_0$bio_alb_0 <- ifelse(CLSA_cop0$BLD_ALB_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -409,7 +409,7 @@ bio_CLSA_COP_0$bio_alb_0 <- ifelse(CLSA_cop0$BLD_ALB_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS. In this study, values "less than 5 - exact value undetermined" are coded as null.   
+**Harmonization comment**:  In this study, values "less than 5 - exact value undetermined" are coded as null.   
 **R script**:  
 ```{r, echo=TRUE}
 bio_CLSA_COP_0$bio_alt_0 <- ifelse(CLSA_cop0$BLD_ALT_COM =='-8888' | CLSA_cop0$BLD_ALT_COM =='-2222',NA,CLSA_cop0$BLD_ALT_COM)
@@ -422,7 +422,7 @@ bio_CLSA_COP_0$bio_alt_0 <- ifelse(CLSA_cop0$BLD_ALT_COM =='-8888' | CLSA_cop0$B
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -435,7 +435,7 @@ bio_CLSA_COP_0$bio_alt_0 <- ifelse(CLSA_cop0$BLD_ALT_COM =='-8888' | CLSA_cop0$B
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -448,7 +448,7 @@ bio_CLSA_COP_0$bio_alt_0 <- ifelse(CLSA_cop0$BLD_ALT_COM =='-8888' | CLSA_cop0$B
 **Category coding**:
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -461,7 +461,7 @@ bio_CLSA_COP_0$bio_alt_0 <- ifelse(CLSA_cop0$BLD_ALT_COM =='-8888' | CLSA_cop0$B
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -474,7 +474,7 @@ bio_CLSA_COP_0$bio_alt_0 <- ifelse(CLSA_cop0$BLD_ALT_COM =='-8888' | CLSA_cop0$B
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -487,7 +487,7 @@ bio_CLSA_COP_0$bio_alt_0 <- ifelse(CLSA_cop0$BLD_ALT_COM =='-8888' | CLSA_cop0$B
 **Category coding**: 
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -499,7 +499,7 @@ bio_CLSA_COP_0$bio_alt_0 <- ifelse(CLSA_cop0$BLD_ALT_COM =='-8888' | CLSA_cop0$B
 **Variable unit**: ng/ml  
 **Category coding**: 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS. In this study, values "greater than 350 - exact value undetermined" and values "less than 8 - exact value undetermined" are coded as null.  
+**Harmonization comment**:  In this study, values "greater than 350 - exact value undetermined" and values "less than 8 - exact value undetermined" are coded as null.  
 **R script**:  
 ```{r, echo=TRUE}
 bio_CLSA_COP_0$bio_vitd_0 <- ifelse(CLSA_cop0$BLD_VITD_COM =='-8888' | CLSA_cop0$BLD_VITD_COM =='-2222' | CLSA_cop0$BLD_VITD_COM =='-1111',NA,CLSA_cop0$BLD_VITD_COM)
@@ -512,7 +512,7 @@ bio_CLSA_COP_0$bio_vitd_0 <- ifelse(CLSA_cop0$BLD_VITD_COM =='-8888' | CLSA_cop0
 **Category coding**: 
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -525,7 +525,7 @@ bio_CLSA_COP_0$bio_vitd_0 <- ifelse(CLSA_cop0$BLD_VITD_COM =='-8888' | CLSA_cop0
 **Category coding**: 
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -538,7 +538,7 @@ bio_CLSA_COP_0$bio_vitd_0 <- ifelse(CLSA_cop0$BLD_VITD_COM =='-8888' | CLSA_cop0
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -551,7 +551,7 @@ bio_CLSA_COP_0$bio_vitd_0 <- ifelse(CLSA_cop0$BLD_VITD_COM =='-8888' | CLSA_cop0
 **Category coding**:
 
 **Harmonization status**: impossible    
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -564,7 +564,7 @@ bio_CLSA_COP_0$bio_vitd_0 <- ifelse(CLSA_cop0$BLD_VITD_COM =='-8888' | CLSA_cop0
 **Category coding**: 
 
 **Harmonization status**: impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -576,7 +576,7 @@ bio_CLSA_COP_0$bio_vitd_0 <- ifelse(CLSA_cop0$BLD_VITD_COM =='-8888' | CLSA_cop0
 **Variable unit**: ng/ml  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -589,7 +589,7 @@ bio_CLSA_COP_0$bio_vitd_0 <- ifelse(CLSA_cop0$BLD_VITD_COM =='-8888' | CLSA_cop0
 **Category coding**: 
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only) 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$BLD_TRIG_COM)
@@ -601,7 +601,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -614,7 +614,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -627,7 +627,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -639,7 +639,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -651,7 +651,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**: impossible   
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -664,7 +664,7 @@ bio_CLSA_COP_0$bio_tg_0 <- ifelse(CLSA_cop0$BLD_TRIG_COM =='-8888',NA,CLSA_cop0$
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
