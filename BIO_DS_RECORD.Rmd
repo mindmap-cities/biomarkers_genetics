@@ -44,7 +44,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:     
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, MESA, RS, HAPIEE (baseline only).  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -56,8 +56,8 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Variable unit**: mg/L  
 **Category coding**:     
 
-**Harmonization status**:  complete
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS.  
+**Harmonization status**:  impossible  
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -71,7 +71,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:    
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -84,7 +84,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:   
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -97,7 +97,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:   
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -110,7 +110,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:     
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -123,7 +123,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:   
 
 **Harmonization status**:  impossibe
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -136,7 +136,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:
 
 **Harmonization status**: impossible       
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -149,7 +149,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
+**Harmonization comment**:    
 
 **R script**:  
 ```{r, echo=TRUE}
@@ -163,7 +163,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -176,7 +176,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -189,7 +189,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -202,7 +202,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -215,7 +215,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -228,7 +228,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:
 
 **Harmonization status**:  impossible        
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -241,7 +241,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**:
 
 **Harmonization status**:  impossible    
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS.  
+**Harmonization comment**:    
 
 **R script**:  
 ```{r, echo=TRUE}
@@ -255,7 +255,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -268,7 +268,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -281,7 +281,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -294,7 +294,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -307,7 +307,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 4 studies: CLSA, HUNT, LASA, RS
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -320,7 +320,7 @@ bio_RECORD_1 <- data.frame(id = RECORD_bio_wave2$id)
 **Category coding**: 
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS.  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 bio_RECORD_0$bio_alb_0 <- as.numeric(RECORD_bio_wave1$Bio3)
@@ -346,7 +346,7 @@ bio_RECORD_1$bio_alb_1 <- as.numeric(RECORD_bio_wave2$Bio3)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -359,7 +359,7 @@ bio_RECORD_1$bio_alb_1 <- as.numeric(RECORD_bio_wave2$Bio3)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -373,7 +373,7 @@ bio_RECORD_1$bio_alb_1 <- as.numeric(RECORD_bio_wave2$Bio3)
 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -386,7 +386,7 @@ bio_RECORD_1$bio_alb_1 <- as.numeric(RECORD_bio_wave2$Bio3)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -399,7 +399,7 @@ bio_RECORD_1$bio_alb_1 <- as.numeric(RECORD_bio_wave2$Bio3)
 **Category coding**: 
 
 **Harmonization status**:  complete    
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS.  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -412,7 +412,7 @@ bio_RECORD_1$bio_alb_1 <- as.numeric(RECORD_bio_wave2$Bio3)
 **Category coding**: 
 
 **Harmonization status**:  complete    
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 bio_RECORD_0$bio_alt_0 <- as.numeric(RECORD_bio_wave1$Trb16)
@@ -425,7 +425,7 @@ bio_RECORD_0$bio_alt_0 <- as.numeric(RECORD_bio_wave1$Trb16)
 **Category coding**: 
 
 **Harmonization status**:  complete    
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
@@ -438,7 +438,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -451,7 +451,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -464,7 +464,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -477,7 +477,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -490,7 +490,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -502,7 +502,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Variable unit**: ng/ml  
 **Category coding**: 
 **Harmonization status**:  impossible
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -515,9 +515,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**: 
 
 **Harmonization status**: impossible     
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS.  
-
-
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -530,7 +528,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -543,7 +541,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -556,7 +554,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**:
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -569,7 +567,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**: 
 
 **Harmonization status**:  impossible      
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS.      
+**Harmonization comment**:      
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -581,7 +579,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Variable unit**: ng/ml  
 **Category coding**: 
 **Harmonization status**:  impossible    
-**Harmonization comment**: Available in 5 studies: CLSA, HUNT, LASA, MESA, RS  
+**Harmonization comment**:    
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -594,7 +592,7 @@ bio_RECORD_1$bio_alt_1 <- as.numeric(RECORD_bio_wave2$Trb16)
 **Category coding**: 
 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 7 studies: CLSA, HUNT, LASA, RECORD, MESA, RS, HAPIEE (baseline only).  
+**Harmonization comment**:     
 **R script**:  
 ```{r, echo=TRUE}
 bio_RECORD_0$bio_tg_0 <- as.numeric(RECORD_bio_wave1$Bio12)
@@ -606,7 +604,7 @@ bio_RECORD_0$bio_tg_0 <- as.numeric(RECORD_bio_wave1$Bio12)
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  complete  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS. Study-specific variable is rounded.  
+**Harmonization comment**: Study-specific variable is rounded.  
 **R script**:  
 ```{r, echo=TRUE}
 bio_RECORD_1$bio_tg_1 <- as.numeric(RECORD_bio_wave2$Bio12)
@@ -619,7 +617,7 @@ bio_RECORD_1$bio_tg_1 <- as.numeric(RECORD_bio_wave2$Bio12)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -632,7 +630,7 @@ bio_RECORD_1$bio_tg_1 <- as.numeric(RECORD_bio_wave2$Bio12)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:  
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -644,7 +642,7 @@ bio_RECORD_1$bio_tg_1 <- as.numeric(RECORD_bio_wave2$Bio12)
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -656,7 +654,7 @@ bio_RECORD_1$bio_tg_1 <- as.numeric(RECORD_bio_wave2$Bio12)
 **Variable unit**: mmol/L  
 **Category coding**: 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
@@ -669,7 +667,7 @@ bio_RECORD_1$bio_tg_1 <- as.numeric(RECORD_bio_wave2$Bio12)
 **Category coding**: 
 
 **Harmonization status**:  impossible  
-**Harmonization comment**: Available in 6 studies: CLSA, HUNT, LASA, RECORD, MESA, RS 
+**Harmonization comment**:   
 **R script**:  
 ```{r, echo=TRUE}
 
